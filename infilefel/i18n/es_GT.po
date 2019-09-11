@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 05:27+0000\n"
-"PO-Revision-Date: 2019-08-26 23:39-0600\n"
+"POT-Creation-Date: 2019-09-09 04:47+0000\n"
+"PO-Revision-Date: 2019-09-08 22:50-0600\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,11 +20,6 @@ msgstr ""
 #. module: infile_fel
 #: model:ir.model.fields,field_description:infile_fel.field_infilefel_config_settings__api_key
 msgid "API Key"
-msgstr "Clave de API"
-
-#. module: infile_fel
-#: model:ir.model.fields,field_description:infile_fel.field_infilefel_settings__api_key
-msgid "API key"
 msgstr "Clave de API"
 
 #. module: infile_fel
@@ -124,7 +119,7 @@ msgstr "Automatizar Proceso de Factura"
 #. module: infile_fel
 #: model:ir.model.fields,field_description:infile_fel.field_infilefel_config_settings__module_currency_rate_live
 msgid "Automatic Currency Rates"
-msgstr "Taza de Cambio Automática"
+msgstr "Tasa de Cambio Automática"
 
 #. module: infile_fel
 #: model:ir.model.fields,field_description:infile_fel.field_infilefel_config_settings__module_account_yodlee
@@ -321,8 +316,8 @@ msgid "Enable password reset from Login page"
 msgstr "Habilitar restablecimiento de la contraseña desde la página de inicio de sesión"
 
 #. module: infile_fel
-#: code:addons/infile_fel/models/infilefel_settings.py:446
-#: code:addons/infile_fel/models/infilefel_settings.py:580
+#: code:addons/infile_fel/models/infilefel_settings.py:453
+#: code:addons/infile_fel/models/infilefel_settings.py:599
 #, python-format
 msgid "Error signing document: {}"
 msgstr "Error al firmar documento: {}"
@@ -418,11 +413,6 @@ msgstr ""
 #: selection:infilefel.settings,vat_affiliation:0
 msgid "GEN"
 msgstr ""
-
-#. module: infile_fel
-#: model_terms:ir.ui.view,arch_db:infile_fel.infilefel_settings_view
-msgid "Get token"
-msgstr "Obtener token"
 
 #. module: infile_fel
 #: model:ir.model.fields,field_description:infile_fel.field_infilefel_config_settings__module_google_spreadsheet
@@ -586,7 +576,7 @@ msgstr "Gestionar varias compañías"
 
 #. module: infile_fel
 #: code:addons/infile_fel/models/infilefel_settings.py:94
-#: code:addons/infile_fel/models/infilefel_settings.py:509
+#: code:addons/infile_fel/models/infilefel_settings.py:517
 #, python-format
 msgid "Missing document date"
 msgstr "No se ha especificado fecha del documento"
@@ -753,7 +743,7 @@ msgstr "Mostrar Efecto"
 #. module: infile_fel
 #: model:ir.model.fields,field_description:infile_fel.field_infilefel_config_settings__group_show_line_subtotals_tax_included
 msgid "Show line subtotals with taxes (B2C)"
-msgstr "Mostrar subtitules de línea con impuestos (B2C)"
+msgstr "Mostrar subtotales de línea con impuestos (B2C)"
 
 #. module: infile_fel
 #: model:ir.model.fields,field_description:infile_fel.field_infilefel_config_settings__group_show_line_subtotals_tax_excluded
@@ -888,22 +878,21 @@ msgid ""
 "This allows you grouping payments into a single batch and eases the reconciliation process.\n"
 "-This installs the account_batch_payment module."
 msgstr ""
+"Esto le permite agrupar pagos en un único lote y facilita el proceso de conciliación.\n"
+"-Esto instala el módulo account_batch_payment."
 
 #. module: infile_fel
 #: model:ir.model.fields,field_description:infile_fel.field_infilefel_config_settings__token
-#: model:ir.model.fields,field_description:infile_fel.field_infilefel_settings__token
 msgid "Token"
 msgstr ""
 
 #. module: infile_fel
 #: model:ir.model.fields,field_description:infile_fel.field_infilefel_config_settings__token_due_date
-#: model:ir.model.fields,field_description:infile_fel.field_infilefel_settings__token_due_date
 msgid "Token due date"
 msgstr "Vencimiento de token"
 
 #. module: infile_fel
 #: model:ir.model.fields,field_description:infile_fel.field_infilefel_config_settings__ws_url_token
-#: model:ir.model.fields,field_description:infile_fel.field_infilefel_settings__ws_url_token
 msgid "Token web service URL"
 msgstr "URL de servicio web de token"
 
@@ -1011,70 +1000,58 @@ msgid "Weight unit of measure"
 msgstr "Unidad de medida de peso"
 
 #. module: infile_fel
-#: code:addons/infile_fel/models/infilefel_settings.py:908
+#: code:addons/infile_fel/models/infilefel_settings.py:949
 #, python-format
 msgid "infilefel Errors {}"
 msgstr "Errores InFileFEL {}"
 
 #. module: infile_fel
-#: code:addons/infile_fel/models/infilefel_settings.py:499
+#: code:addons/infile_fel/models/infilefel_settings.py:507
 #, python-format
 msgid "infilefel Signer: {}"
 msgstr "Firmador InFileFEL: {}"
 
 #. module: infile_fel
 #: code:addons/infile_fel/models/infilefel_settings.py:73
-#: code:addons/infile_fel/models/infilefel_settings.py:625
-#: code:addons/infile_fel/models/infilefel_settings.py:921
+#: code:addons/infile_fel/models/infilefel_settings.py:657
+#: code:addons/infile_fel/models/infilefel_settings.py:962
 #, python-format
 msgid "infilefel: API key not set"
 msgstr "InFileFEL: No se encontró llave de API"
 
 #. module: infile_fel
 #: code:addons/infile_fel/models/infilefel_settings.py:71
-#: code:addons/infile_fel/models/infilefel_settings.py:497
-#: code:addons/infile_fel/models/infilefel_settings.py:623
-#: code:addons/infile_fel/models/infilefel_settings.py:895
+#: code:addons/infile_fel/models/infilefel_settings.py:505
+#: code:addons/infile_fel/models/infilefel_settings.py:655
+#: code:addons/infile_fel/models/infilefel_settings.py:936
 #, python-format
 msgid "infilefel: Error consuming web service: {}"
 msgstr "InFileFEL: Error al consumir servicio web: {}"
 
 #. module: infile_fel
-#: code:addons/infile_fel/models/infilefel_settings.py:483
-#: code:addons/infile_fel/models/infilefel_settings.py:609
+#: code:addons/infile_fel/models/infilefel_settings.py:491
+#: code:addons/infile_fel/models/infilefel_settings.py:640
 #, python-format
 msgid "infilefel: Response error consuming web service: {}"
 msgstr "InFileFEL: Error en respuesta al consumir servicio web: {}"
 
 #. module: infile_fel
-#: code:addons/infile_fel/models/infilefel_settings.py:430
-#: code:addons/infile_fel/models/infilefel_settings.py:572
+#: code:addons/infile_fel/models/infilefel_settings.py:437
+#: code:addons/infile_fel/models/infilefel_settings.py:583
 #, python-format
 msgid "infilefel: Signed XML file not found"
 msgstr "InFileFEL: No se encontró archivo XML firmado"
 
 #. module: infile_fel
-#: code:addons/infile_fel/models/infilefel_settings.py:627
-#, python-format
-msgid "infilefel: Token expired"
-msgstr "InFileFEL: Token expirado"
-
-#. module: infile_fel
-#: code:addons/infile_fel/models/infilefel_settings.py:629
-#, python-format
-msgid "infilefel: Token not set"
-msgstr "InFileFEL: Token no especificado"
-
-#. module: infile_fel
 #: code:addons/infile_fel/models/infilefel_settings.py:75
-#: code:addons/infile_fel/models/infilefel_settings.py:923
+#: code:addons/infile_fel/models/infilefel_settings.py:964
 #, python-format
 msgid "infilefel: User not set"
 msgstr "InFileFEL: Usuario no especificado"
 
 #. module: infile_fel
 #: code:addons/infile_fel/models/infilefel_settings.py:77
-#: code:addons/infile_fel/models/infilefel_settings.py:925
+#: code:addons/infile_fel/models/infilefel_settings.py:966
 #, python-format
 msgid "infilefel: Web service URL for tokens not set"
 msgstr "InFileFEL: URL de servicio web para tokens no se ha configurado"

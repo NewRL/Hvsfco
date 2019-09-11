@@ -7,14 +7,14 @@
     'description': """
         Conexión a servicios de InFile para generación de Factura Electrónica en Línea (FEL)
     """,
-    'author': "  ",
-    'website': " ",
+    'author': "acentoNET",
+    'website': "http://www.acentoNET.com",
     'category': 'Sales',
     'sequence': 20,
     'version': '0.1',
     'depends': ['account'],
     'data': [
-#        "security/ir.model.access.csv",
+        "security/ir.model.access.csv",
         'views/infilefel_settings.xml',
         'views/account_tax.xml',
         'views/account_journal.xml',
