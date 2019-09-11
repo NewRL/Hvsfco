@@ -7,8 +7,8 @@
     'description': """
         Conexión a servicios de InFile para generación de Factura Electrónica en Línea (FEL)
     """,
-    'author': "acentoNET",
-    'website': "http://www.acentoNET.com",
+    'author': "Mc-Sistemas",
+    'website': "http://mcsistemas.net",
     'category': 'Sales',
     'sequence': 20,
     'version': '0.1',
