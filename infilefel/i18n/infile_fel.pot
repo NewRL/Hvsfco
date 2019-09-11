@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-08-27 05:27+0000\n"
-"PO-Revision-Date: 2019-08-27 05:27+0000\n"
+"POT-Creation-Date: 2019-09-09 04:46+0000\n"
+"PO-Revision-Date: 2019-09-09 04:46+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,11 +18,6 @@ msgstr ""
 #. module: infile_fel
 #: model:ir.model.fields,field_description:infile_fel.field_infilefel_config_settings__api_key
 msgid "API Key"
-msgstr ""
-
-#. module: infile_fel
-#: model:ir.model.fields,field_description:infile_fel.field_infilefel_settings__api_key
-msgid "API key"
 msgstr ""
 
 #. module: infile_fel
@@ -316,8 +311,8 @@ msgid "Enable password reset from Login page"
 msgstr ""
 
 #. module: infile_fel
-#: code:addons/infile_fel/models/infilefel_settings.py:446
-#: code:addons/infile_fel/models/infilefel_settings.py:580
+#: code:addons/infile_fel/models/infilefel_settings.py:453
+#: code:addons/infile_fel/models/infilefel_settings.py:599
 #, python-format
 msgid "Error signing document: {}"
 msgstr ""
@@ -412,11 +407,6 @@ msgstr ""
 #: selection:infilefel.config.settings,vat_affiliation:0
 #: selection:infilefel.settings,vat_affiliation:0
 msgid "GEN"
-msgstr ""
-
-#. module: infile_fel
-#: model_terms:ir.ui.view,arch_db:infile_fel.infilefel_settings_view
-msgid "Get token"
 msgstr ""
 
 #. module: infile_fel
@@ -581,7 +571,7 @@ msgstr ""
 
 #. module: infile_fel
 #: code:addons/infile_fel/models/infilefel_settings.py:94
-#: code:addons/infile_fel/models/infilefel_settings.py:509
+#: code:addons/infile_fel/models/infilefel_settings.py:517
 #, python-format
 msgid "Missing document date"
 msgstr ""
@@ -873,19 +863,16 @@ msgstr ""
 
 #. module: infile_fel
 #: model:ir.model.fields,field_description:infile_fel.field_infilefel_config_settings__token
-#: model:ir.model.fields,field_description:infile_fel.field_infilefel_settings__token
 msgid "Token"
 msgstr ""
 
 #. module: infile_fel
 #: model:ir.model.fields,field_description:infile_fel.field_infilefel_config_settings__token_due_date
-#: model:ir.model.fields,field_description:infile_fel.field_infilefel_settings__token_due_date
 msgid "Token due date"
 msgstr ""
 
 #. module: infile_fel
 #: model:ir.model.fields,field_description:infile_fel.field_infilefel_config_settings__ws_url_token
-#: model:ir.model.fields,field_description:infile_fel.field_infilefel_settings__ws_url_token
 msgid "Token web service URL"
 msgstr ""
 
@@ -993,70 +980,58 @@ msgid "Weight unit of measure"
 msgstr ""
 
 #. module: infile_fel
-#: code:addons/infile_fel/models/infilefel_settings.py:908
+#: code:addons/infile_fel/models/infilefel_settings.py:949
 #, python-format
 msgid "infilefel Errors {}"
 msgstr ""
 
 #. module: infile_fel
-#: code:addons/infile_fel/models/infilefel_settings.py:499
+#: code:addons/infile_fel/models/infilefel_settings.py:507
 #, python-format
 msgid "infilefel Signer: {}"
 msgstr ""
 
 #. module: infile_fel
 #: code:addons/infile_fel/models/infilefel_settings.py:73
-#: code:addons/infile_fel/models/infilefel_settings.py:625
-#: code:addons/infile_fel/models/infilefel_settings.py:921
+#: code:addons/infile_fel/models/infilefel_settings.py:657
+#: code:addons/infile_fel/models/infilefel_settings.py:962
 #, python-format
 msgid "infilefel: API key not set"
 msgstr ""
 
 #. module: infile_fel
 #: code:addons/infile_fel/models/infilefel_settings.py:71
-#: code:addons/infile_fel/models/infilefel_settings.py:497
-#: code:addons/infile_fel/models/infilefel_settings.py:623
-#: code:addons/infile_fel/models/infilefel_settings.py:895
+#: code:addons/infile_fel/models/infilefel_settings.py:505
+#: code:addons/infile_fel/models/infilefel_settings.py:655
+#: code:addons/infile_fel/models/infilefel_settings.py:936
 #, python-format
 msgid "infilefel: Error consuming web service: {}"
 msgstr ""
 
 #. module: infile_fel
-#: code:addons/infile_fel/models/infilefel_settings.py:483
-#: code:addons/infile_fel/models/infilefel_settings.py:609
+#: code:addons/infile_fel/models/infilefel_settings.py:491
+#: code:addons/infile_fel/models/infilefel_settings.py:640
 #, python-format
 msgid "infilefel: Response error consuming web service: {}"
 msgstr ""
 
 #. module: infile_fel
-#: code:addons/infile_fel/models/infilefel_settings.py:430
-#: code:addons/infile_fel/models/infilefel_settings.py:572
+#: code:addons/infile_fel/models/infilefel_settings.py:437
+#: code:addons/infile_fel/models/infilefel_settings.py:583
 #, python-format
 msgid "infilefel: Signed XML file not found"
 msgstr ""
 
 #. module: infile_fel
-#: code:addons/infile_fel/models/infilefel_settings.py:627
-#, python-format
-msgid "infilefel: Token expired"
-msgstr ""
-
-#. module: infile_fel
-#: code:addons/infile_fel/models/infilefel_settings.py:629
-#, python-format
-msgid "infilefel: Token not set"
-msgstr ""
-
-#. module: infile_fel
 #: code:addons/infile_fel/models/infilefel_settings.py:75
-#: code:addons/infile_fel/models/infilefel_settings.py:923
+#: code:addons/infile_fel/models/infilefel_settings.py:964
 #, python-format
 msgid "infilefel: User not set"
 msgstr ""
 
 #. module: infile_fel
 #: code:addons/infile_fel/models/infilefel_settings.py:77
-#: code:addons/infile_fel/models/infilefel_settings.py:925
+#: code:addons/infile_fel/models/infilefel_settings.py:966
 #, python-format
 msgid "infilefel: Web service URL for tokens not set"
 msgstr ""

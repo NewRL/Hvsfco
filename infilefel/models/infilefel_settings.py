@@ -13,13 +13,14 @@ from tempfile import gettempdir
 import html
 import base64
 
+
 class infilefel_settings(models.Model):
     _name = "infilefel.settings"
     _description = "InFile FEL settings"
 
-    ws_url_document = fields.Char('Document web service URL', default = 'https://')
-    ws_url_void = fields.Char('Void document web service URL', default = 'https://')
-    ws_url_signer = fields.Char('Signer web service URL', default = 'https://')
+    ws_url_document = fields.Char('Document web service URL', default='https://')
+    ws_url_void = fields.Char('Void document web service URL', default='https://')
+    ws_url_signer = fields.Char('Signer web service URL', default='https://')
     ws_timeout = fields.Integer('Web service timeout', default=300)
     user = fields.Char('Certification user')
     sign_user = fields.Char('Sign user')
@@ -51,7 +52,8 @@ class infilefel_settings(models.Model):
                     headers = {
                         'Content-Type': 'application/xml',
                     }
-                    data = "<SolicitaTokenRequest><usuario>{}</usuario><apikey>{}</apikey></SolicitaTokenRequest>".format(self.user, self.api_key)
+                    data = "<SolicitaTokenRequest><usuario>{}</usuario><apikey>{}</apikey></SolicitaTokenRequest>".format(
+                        self.user, self.api_key)
                     try:
                         response = requests.post(self.ws_url_token, headers=headers, data=data)
                         if response.ok:
@@ -61,12 +63,14 @@ class infilefel_settings(models.Model):
                                 self.token = token_tag[0].text
                             due_date_tag = text.findall('vigencia')
                             if due_date_tag:
-                                token_due_date = datetime.strptime(due_date_tag[0].text[:19], '%Y-%m-%dT%H:%M:%S').replace(tzinfo=pytz.timezone(self.env.user.tz))
+                                token_due_date = datetime.strptime(due_date_tag[0].text[:19],
+                                                                   '%Y-%m-%dT%H:%M:%S').replace(
+                                    tzinfo=pytz.timezone(self.env.user.tz))
                                 self.token_due_date = token_due_date
                     except Exception as e:
                         raise UserError(_('infilefel: Error consuming web service: {}').format(e.message))
                 else:
-                    raise UserError( _('infilefel: API key not set'))
+                    raise UserError(_('infilefel: API key not set'))
             else:
                 raise UserError(_('infilefel: User not set'))
         else:
@@ -78,6 +82,12 @@ class infilefel_settings(models.Model):
         def escape_string(value):
             # return value.replace('&', '&amp;').replace('>', '&gt;').replace('<', '&lt').replace('"', '&quot;').replace("'", '&apos;')
             return html.escape(value).encode("ascii", "xmlcharrefreplace").decode('utf8')
+
+        if not invoice.date_invoice:
+            _data = {'date_invoice':(time.strftime("%d/%m/%Y")),
+                     'date_due':(time.strftime("%d/%m/%Y")),
+                     }
+            invoice.write(_data)
 
         token = None
         if not invoice.journal_id.infilefel_type:
@@ -150,7 +160,6 @@ class infilefel_settings(models.Model):
                     line_discount = round(line_gross * line.discount / 100, 2)
                     line_amount = line_gross - line_discount
 
-
                 xml_lines += """<dte:Item BienOServicio="{BienOServicio}" NumeroLinea="{NumeroLinea}">
                         <dte:Cantidad>{Cantidad}</dte:Cantidad>
                         <dte:UnidadMedida>{UnidadMedida}</dte:UnidadMedida>
@@ -161,7 +170,7 @@ class infilefel_settings(models.Model):
                     BienOServicio='S' if line.product_id.type == 'service' else 'B',
                     NumeroLinea=line_number,
                     Cantidad=line.quantity,
-                    UnidadMedida = escape_string(line.uom_id.name)[:3],
+                    UnidadMedida=escape_string(line.uom_id.name)[:3],
                     Descripcion=escape_string(line.name),
                     PrecioUnitario=line.price_unit,
                     Precio=line_gross,
@@ -227,7 +236,8 @@ class infilefel_settings(models.Model):
                 xml_lines += """{TituloImpuestos}
                         <dte:Total>{Total}</dte:Total>
                     </dte:Item>
-                """.format(TituloImpuestos='' if invoice.journal_id.infilefel_type in ['NABN'] else '</dte:Impuestos>', Total=line_amount)
+                """.format(TituloImpuestos='' if invoice.journal_id.infilefel_type in ['NABN'] else '</dte:Impuestos>',
+                           Total=line_amount)
 
             #
             # Frases
@@ -289,34 +299,34 @@ class infilefel_settings(models.Model):
                         </dte:Items>
                         <dte:Totales>
                             {TituloImpuestos}""".format(
-                    CodigoMoneda=invoice.currency_id.name,
-                    EXP='',  # Para exportaciones: 'EXP="SI"'
-                    FechaHoraEmision=invoice_sign_date,
-                    NumeroAcceso='',
-                    Tipo=invoice.journal_id.infilefel_type,
-                    AfiliacionIVA=self.vat_affiliation,
-                    CodigoEstablecimiento=self.organization_code,
-                    CorreoEmisor=invoice.company_id.email if invoice.company_id.email else '',
-                    NITEmisor=invoice.company_id.vat.replace('-', '') if invoice.company_id.vat else 'C/F',
-                    NombreComercial=escape_string(invoice.company_id.name),
-                    NombreEmisor=escape_string(invoice.company_id.name),
-                    DireccionEmisor=escape_string((invoice.company_id.street if invoice.company_id.street else '') + (' ' + invoice.company_id.street2 if invoice.company_id.street2 else '')),
-                    CodigoPostalEmisor=invoice.company_id.zip if invoice.company_id.zip else '01001',
-                    MunicipioEmisor=escape_string(invoice.company_id.city if invoice.company_id.city else ''),
-                    DepartamentoEmisor=escape_string(invoice.company_id.state_id.name if invoice.company_id.state_id else ''),
-                    PaisEmisor=escape_string(invoice.company_id.country_id.code if invoice.company_id.country_id else ''),
-                    DireccionReceptor=escape_string((invoice.partner_id.street if invoice.partner_id.street else '') + (' ' + invoice.partner_id.street2 if invoice.partner_id.street2 else '')),
-                    CorreoReceptor=invoice.partner_id.email if invoice.partner_id.email else '',
-                    NITReceptor=invoice.partner_id.vat.replace('-', '') if invoice.partner_id.vat else 'CF',
-                    NombreReceptor=escape_string(invoice.partner_id.name),
-                    CodigoPostal=invoice.partner_id.zip if invoice.partner_id.zip else '01001',
-                    Municipio=escape_string(invoice.partner_id.city if invoice.partner_id.city else ''),
-                    Departamento=escape_string(invoice.partner_id.state_id.name if invoice.partner_id.state_id else ''),
-                    Pais=escape_string(invoice.partner_id.country_id.code if invoice.partner_id.country_id else ''),
-                    Frases=xml_phrases,
-                    Items=xml_lines,
-                    TituloImpuestos='' if invoice.journal_id.infilefel_type in ['NABN'] else '<dte:TotalImpuestos>'
-                )
+                CodigoMoneda=invoice.currency_id.name,
+                EXP='',  # Para exportaciones: 'EXP="SI"'
+                FechaHoraEmision=invoice_sign_date,
+                NumeroAcceso='',
+                Tipo=invoice.journal_id.infilefel_type,
+                AfiliacionIVA=self.vat_affiliation,
+                CodigoEstablecimiento=self.organization_code,
+                CorreoEmisor=invoice.company_id.email if invoice.company_id.email else '',
+                NITEmisor=invoice.company_id.vat.replace('-', '') if invoice.company_id.vat else 'C/F',
+                NombreComercial=escape_string(invoice.company_id.name),
+                NombreEmisor=escape_string(invoice.company_id.name),
+                DireccionEmisor=escape_string((invoice.company_id.street if invoice.company_id.street else '') + (' ' + invoice.company_id.street2 if invoice.company_id.street2 else '')),
+                CodigoPostalEmisor=invoice.company_id.zip if invoice.company_id.zip else '01001',
+                MunicipioEmisor=escape_string(invoice.company_id.city if invoice.company_id.city else ''),
+                DepartamentoEmisor=escape_string(invoice.company_id.state_id.name if invoice.company_id.state_id else ''),
+                PaisEmisor=escape_string(invoice.company_id.country_id.code if invoice.company_id.country_id else ''),
+                DireccionReceptor=escape_string((invoice.partner_id.street if invoice.partner_id.street else '') + (' ' + invoice.partner_id.street2 if invoice.partner_id.street2 else '')),
+                CorreoReceptor=invoice.partner_id.email if invoice.partner_id.email else '',
+                NITReceptor=invoice.partner_id.vat.replace('-', '') if invoice.partner_id.vat else 'CF',
+                NombreReceptor=escape_string(invoice.partner_id.name),
+                CodigoPostal=invoice.partner_id.zip if invoice.partner_id.zip else '01001',
+                Municipio=escape_string(invoice.partner_id.city if invoice.partner_id.city else ''),
+                Departamento=escape_string(invoice.partner_id.state_id.name if invoice.partner_id.state_id else ''),
+                Pais=escape_string(invoice.partner_id.country_id.code if invoice.partner_id.country_id else ''),
+                Frases=xml_phrases,
+                Items=xml_lines,
+                TituloImpuestos='' if invoice.journal_id.infilefel_type in ['NABN'] else '<dte:TotalImpuestos>'
+            )
             # xml += """</dte:Items>
             #                 <dte:Totales>
             #                 <dte:TotalImpuestos>
@@ -370,10 +380,12 @@ class infilefel_settings(models.Model):
                         id_complemento = 'ComplementoReferenciaNota'
                         nombre_complemento = 'Complemento Referencia Nota'
                         previous_regime = 'RegimenAntiguo="Antiguo"'
-#                            original_document = invoice.refund_invoice_id.journal_id.infilefel_previous_authorization
+                        #                            original_document = invoice.refund_invoice_id.journal_id.infilefel_previous_authorization
                         original_document = invoice.refund_invoice_id.resolution_id.name
-#                            reason = 'SerieDocumentoOrigen="{}" NumeroDocumentoOrigen="{}"'.format(invoice.refund_invoice_id.journal_id.infilefel_previous_serial, invoice.refund_invoice_id.name)
-                        reason = 'SerieDocumentoOrigen="{}" NumeroDocumentoOrigen="{}"'.format(invoice.refund_invoice_id.gface_dte_serial[8:9], str(int(invoice.refund_invoice_id.gface_dte_number[16:100])) )
+                        #                            reason = 'SerieDocumentoOrigen="{}" NumeroDocumentoOrigen="{}"'.format(invoice.refund_invoice_id.journal_id.infilefel_previous_serial, invoice.refund_invoice_id.name)
+                        reason = 'SerieDocumentoOrigen="{}" NumeroDocumentoOrigen="{}"'.format(
+                            invoice.refund_invoice_id.gface_dte_serial[8:9],
+                            str(int(invoice.refund_invoice_id.gface_dte_number[16:100])))
 
                     references = references.format(
                         RegimenAnterior=previous_regime,
@@ -384,8 +396,9 @@ class infilefel_settings(models.Model):
                 else:
                     id_complemento = 'ComplementoReferenciaNota'
                     nombre_complemento = 'Complemento Referencia Nota'
-#                        reason = 'SerieDocumentoOrigen="{}" NumeroDocumentoOrigen="{}"'.format(invoice.journal_id.infilefel_previous_serial, invoice.name)
-                    reason = 'SerieDocumentoOrigen="{}" NumeroDocumentoOrigen="{}"'.format(invoice.refund_invoice_id.gface_dte_serial, invoice.refund_invoice_id.resolution_id.name)
+                    #                        reason = 'SerieDocumentoOrigen="{}" NumeroDocumentoOrigen="{}"'.format(invoice.journal_id.infilefel_previous_serial, invoice.name)
+                    reason = 'SerieDocumentoOrigen="{}" NumeroDocumentoOrigen="{}"'.format(
+                        invoice.refund_invoice_id.gface_dte_serial, invoice.refund_invoice_id.resolution_id.name)
                     references = references.format(
                         RegimenAnterior='RegimenAntiguo="Antiguo"',
                         DocumentoOrigen=invoice.journal_id.infilefel_previous_authorization,
@@ -404,7 +417,9 @@ class infilefel_settings(models.Model):
                         </dte:DatosEmision>
                     </dte:DTE>
                 </dte:SAT>
-</dte:GTDocumento>""".format(TituloImpuestos='' if invoice.journal_id.infilefel_type in ['NABN'] else '</dte:TotalImpuestos>', GranTotal=invoice.amount_total, Complementos=extras)
+</dte:GTDocumento>""".format(
+                TituloImpuestos='' if invoice.journal_id.infilefel_type in ['NABN'] else '</dte:TotalImpuestos>',
+                GranTotal=invoice.amount_total, Complementos=extras)
             source_xml = xml
 
             xmlb64 = ''
@@ -416,7 +431,9 @@ class infilefel_settings(models.Model):
                 with open(source_xml_file, 'w', encoding="utf-8") as xml_file:
                     xml_file.write(xml)
                 # os.system('java -jar {} {} {} {} {}'.format('/Users/oscar/Desarrollo/java/Xadesinfilefel.jar', source_xml_file, '/tmp/39796558-28d66a63138ff444.pfx', "'Neo2018$1'", invoice.infilefel_uuid))
-                os.system("java -jar {} {} {} '{}' {} {} {}".format(self.signer_location, source_xml_file, self.certificate_file, self.certificate_password, invoice.infilefel_uuid, tmp_dir, 'DatosEmision'))
+                os.system("java -jar {} {} {} '{}' {} {} {}".format(self.signer_location, source_xml_file,
+                                                                    self.certificate_file, self.certificate_password,
+                                                                    invoice.infilefel_uuid, tmp_dir, 'DatosEmision'))
 
                 if os.path.isfile(signed_xml_file):
                     with open(signed_xml_file, 'r') as myfile:
@@ -476,7 +493,8 @@ class infilefel_settings(models.Model):
                                     result['RegistraDocumentoXMLResponse']['listado_errores']['error']['desc_error'])
                             raise UserError(error_message)
                     else:
-                        raise UserError(_('infilefel: Response error consuming web service: {}').format(str(response.text)))
+                        raise UserError(
+                            _('infilefel: Response error consuming web service: {}').format(str(response.text)))
                 except Exception as e:
                     error_message = ''
                     if hasattr(e, 'object'):
@@ -503,14 +521,19 @@ class infilefel_settings(models.Model):
             return
         elif not invoice.date_invoice:
             raise UserError(_('Missing document date'))
-        elif self.token_due_date:
-            if self.token_due_date >= fields.Datetime.now():
-                if not invoice.infilefel_void_uuid:
-                    invoice.infilefel_void_uuid = str(uuid.uuid4())
+        else:
+            if not invoice.infilefel_void_uuid:
+                invoice.infilefel_void_uuid = str(uuid.uuid4())
 
-                current_date = datetime.now().replace(tzinfo=pytz.utc).astimezone(pytz.timezone(self.env.user.tz))
+            # current_date = datetime.now().replace(tzinfo=pytz.utc).astimezone(pytz.timezone(self.env.user.tz))
+            sign_date = datetime.now().replace(tzinfo=pytz.UTC).astimezone(pytz.timezone(self.env.user.tz))
+            sign_date_utc = datetime.now().replace(tzinfo=pytz.UTC)
+            current_date = sign_date.strftime('%Y-%m-%dT%H:%M:%S-06:00')
+            current_time = datetime.now().replace(tzinfo=pytz.UTC).astimezone(pytz.timezone(self.env.user.tz)).strftime('%H:%M:%S-06:00')
+            invoice_sign_date = invoice.infilefel_sign_date.strftime('%Y-%m-%dT%H:%M:%S-06:00')
+            void_sign_date = invoice.date_invoice.strftime('%Y-%m-%dT') + current_time
 
-                xml = """<?xml version="1.0" encoding="UTF-8"?><dte:GTAnulacionDocumento Version="0.1" xmlns:dte="http://www.sat.gob.gt/dte/fel/0.1.0" xmlns:xd="http://www.w3.org/2000/09/xmldsig#">
+            xml = """<?xml version="1.0" encoding="UTF-8"?><dte:GTAnulacionDocumento Version="0.1" xmlns:dte="http://www.sat.gob.gt/dte/fel/0.1.0" xmlns:xd="http://www.w3.org/2000/09/xmldsig#" xmlns:n1="http://www.altova.com/samplexml/other-namespace" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <dte:SAT>
                     <dte:AnulacionDTE ID="DatosCertificados">
                         <dte:DatosGenerales ID="DatosAnulacion"
@@ -521,108 +544,123 @@ class infilefel_settings(models.Model):
                             FechaHoraAnulacion="{FechaHoraAnulacion}"
                             MotivoAnulacion="Cancelacion"
                         />
-                        <dte:Certificacion>
-                            <dte:NITCertificador>{NITCertificador}</dte:NITCertificador>
-                            <dte:NombreCertificador>{NombreCertificador}</dte:NombreCertificador>
-                            <dte:FechaHoraCertificacion>{FechaHoraCertificacion}</dte:FechaHoraCertificacion>
-                        </dte:Certificacion>
                     </dte:AnulacionDTE>
                 </dte:SAT></dte:GTAnulacionDocumento>""".format(
-                        NumeroDocumentoAAnular=invoice.infilefel_sat_uuid,
-                        NITEmisor=invoice.company_id.vat.replace('-', '') if invoice.company_id.vat else 'C/F',
-                        IDReceptor=invoice.partner_id.vat.replace('-', '') if invoice.partner_id.vat else 'CF',
-                        FechaEmisionDocumentoAnular=invoice.date_invoice + 'T00:00:00-06:00',
-                        FechaHoraAnulacion=current_date.replace(microsecond=1).isoformat().replace('.000001', '.000'),
-                        NITCertificador=invoice.company_id.vat.replace('-', '') if invoice.company_id.vat else 'C/F',
-                        NombreCertificador=invoice.company_id.name,
-                        FechaHoraCertificacion=invoice.date_invoice + 'T00:00:00-06:00',
-                    )
+                NumeroDocumentoAAnular=invoice.infilefel_sat_uuid,
+                NITEmisor=invoice.company_id.vat.replace('-', '') if invoice.company_id.vat else 'C/F',
+                IDReceptor=invoice.partner_id.vat.replace('-', '') if invoice.partner_id.vat else 'CF',
+                FechaEmisionDocumentoAnular=invoice_sign_date,
+                FechaHoraAnulacion=void_sign_date,
+                NITCertificador=invoice.company_id.vat.replace('-', '') if invoice.company_id.vat else 'C/F',
+                NombreCertificador=invoice.company_id.name,
+                FechaHoraCertificacion=void_sign_date,
+            )
 
-                source_xml = xml
+            source_xml = xml
 
-                # tmp_dir = gettempdir()
-                # source_xml_file = os.path.join(tmp_dir, '{}_source.xml'.format(invoice.infilefel_void_uuid))
-                # signed_xml_file = os.path.join(tmp_dir, '{}.xml'.format(invoice.infilefel_void_uuid))
-                # with open(source_xml_file, 'w') as xml_file:
-                #     xml_file.write(xml)
-                # os.system("java -jar {} {} {} '{}' {} {} {}".format(self.signer_location, source_xml_file, self.certificate_file, self.certificate_password, invoice.infilefel_void_uuid, tmp_dir, 'DatosGenerales'))
-                #
-                # if not os.path.isfile(signed_xml_file):
-                #     raise UserError(_('infilefel: Signed XML file not found'))
-                # elif self.token:
-                sign_document = False
-                if self.signing_type == 'LOCAL':
-                    tmp_dir = gettempdir()
-                    source_xml_file = os.path.join(tmp_dir, '{}_source.xml'.format(invoice.infilefel_void_uuid))
-                    signed_xml_file = os.path.join(tmp_dir, '{}.xml'.format(invoice.infilefel_void_uuid))
-                    with open(source_xml_file, 'w') as xml_file:
-                        xml_file.write(xml)
-                    # os.system('java -jar {} {} {} {} {}'.format('/Users/oscar/Desarrollo/java/Xadesinfilefel.jar', source_xml_file, '/tmp/39796558-28d66a63138ff444.pfx', "'Neo2018$1'", invoice.infilefel_uuid))
-                    os.system("java -jar {} {} {} '{}' {} {} {}".format(self.signer_location, source_xml_file, self.certificate_file, self.certificate_password, invoice.infilefel_void_uuid, tmp_dir, 'DatosGenerales'))
+            # tmp_dir = gettempdir()
+            # source_xml_file = os.path.join(tmp_dir, '{}_source.xml'.format(invoice.infilefel_void_uuid))
+            # signed_xml_file = os.path.join(tmp_dir, '{}.xml'.format(invoice.infilefel_void_uuid))
+            # with open(source_xml_file, 'w') as xml_file:
+            #     xml_file.write(xml)
+            # os.system("java -jar {} {} {} '{}' {} {} {}".format(self.signer_location, source_xml_file, self.certificate_file, self.certificate_password, invoice.infilefel_void_uuid, tmp_dir, 'DatosGenerales'))
+            #
+            # if not os.path.isfile(signed_xml_file):
+            #     raise UserError(_('infilefel: Signed XML file not found'))
+            # elif self.token:
+            sign_document = False
+            if self.signing_type == 'LOCAL':
+                tmp_dir = gettempdir()
+                source_xml_file = os.path.join(tmp_dir, '{}_source.xml'.format(invoice.infilefel_void_uuid))
+                signed_xml_file = os.path.join(tmp_dir, '{}.xml'.format(invoice.infilefel_void_uuid))
+                with open(source_xml_file, 'w') as xml_file:
+                    xml_file.write(xml)
+                # os.system('java -jar {} {} {} {} {}'.format('/Users/oscar/Desarrollo/java/Xadesinfilefel.jar', source_xml_file, '/tmp/39796558-28d66a63138ff444.pfx', "'Neo2018$1'", invoice.infilefel_uuid))
+                os.system("java -jar {} {} {} '{}' {} {} {}".format(self.signer_location, source_xml_file,
+                                                                    self.certificate_file, self.certificate_password,
+                                                                    invoice.infilefel_void_uuid, tmp_dir,
+                                                                    'DatosGenerales'))
 
-                    if os.path.isfile(signed_xml_file):
-                        with open(signed_xml_file, 'r') as myfile:
-                            xml = myfile.read()
-                        sign_document = True
-                    else:
-                        raise UserError(_('infilefel: Signed XML file not found'))
+                if os.path.isfile(signed_xml_file):
+                    with open(signed_xml_file, 'r') as myfile:
+                        xml = myfile.read()
+                    sign_document = True
                 else:
-                    sign_response = requests.post(url=self.ws_url_signer, data={'XML': xml, 'UUID': invoice.infilefel_void_uuid, 'Main_Tag': 'DatosGenerales'})
-                    result = json.loads(sign_response.text)
-                    if result['success']:
-                        xml = result['signed_xml'].encode('utf-8')
-                        sign_document = True
-                    else:
-                        raise UserError(_('Error signing document: {}').format(result['message']))
-
-                if sign_document:
-                    headers = {
-                        'Content-Type': 'application/xml',
-                        'Authorization': 'Bearer {}'.format(self.token)
-                    }
-                    data = '<?xml version="1.0" encoding="UTF-8" standalone="no"?><AnulaDocumentoXMLRequest id="{}"><xml_dte><![CDATA[{}]]></xml_dte></AnulaDocumentoXMLRequest>'.format(invoice.infilefel_void_uuid.upper(), xml)
-                    try:
-                        response = requests.post(self.ws_url_void, headers=headers, data=data)
-                        if response.ok:
-                            result = xmltodict.parse(response.text)
-                            if result['AnulaDocumentoXMLResponse']['tipo_respuesta'] == '1':
-                                error_message = ''
-                                if type(result['AnulaDocumentoXMLResponse']['listado_errores']['error']) is list:
-                                    for message in result['AnulaDocumentoXMLResponse']['listado_errores']['error']:
-                                        error_message += '\n{}: {}'.format(message['cod_error'], message['desc_error'])
-                                else:
-                                    error_message += '\n{}: {}'.format(result['AnulaDocumentoXMLResponse']['listado_errores']['error']['cod_error'], result['AnulaDocumentoXMLResponse']['listado_errores']['error']['desc_error'])
-                                raise UserError(error_message)
-                            else:
-                                invoice.write({
-                                    'infilefel_void_sat_uuid': result['AnulaDocumentoXMLResponse']['uuid'],
-                                    'infilefel_void_source_xml': source_xml,
-                                    'infilefel_void_signed_xml': xml,
-                                    'infilefel_void_result_xml': result['AnulaDocumentoXMLResponse']['xml_dte'],
-                                })
-                                invoice.action_invoice_cancel()
-                        else:
-                            raise UserError(_('infilefel: Response error consuming web service: {}').format(str(response.text)))
-                    except Exception as e:
-                        error_message = ''
-                        if hasattr(e, 'object'):
-                            if hasattr(e, 'reason'):
-                                error_message = u"{}: {}".format(e.reason, e.object)
-                            else:
-                                error_message = u" {}".format(e.object)
-                        elif hasattr(e, 'message'):
-                            error_message = e.message
-                        elif hasattr(e, 'name'):
-                            error_message = e.name
-                        else:
-                            error_message = e
-                        raise UserError(_('infilefel: Error consuming web service: {}').format(error_message))
-                else:
-                    raise UserError(_('infilefel: API key not set'))
+                    raise UserError(_('infilefel: Signed XML file not found'))
             else:
-                raise UserError(_('infilefel: Token expired'))
-        else:
-            raise UserError(_('infilefel: Token not set'))
+                data = {
+                    'llave': self.sign_key,
+                    'archivo': base64.b64encode(xml.encode('utf-8')).decode('utf-8'),
+                    'codigo': invoice.infilefel_void_uuid,
+                    'alias': self.sign_user,
+                    "es_anulacion": 'S'
+                }
+                sign_response = requests.post(url=self.ws_url_signer, json=data)
+                result = json.loads(sign_response.text)
+                if result['resultado']:
+                    xmlb64 = result['archivo']
+                    xml = base64.b64decode(xmlb64).decode('utf-8')
+                    sign_document = True
+                else:
+                    raise UserError(_('Error signing document: {}').format(result['descripcion']))
+
+            if sign_document:
+                headers = {
+                    'usuario': self.user,
+                    'llave': self.certification_key,
+                    'identificador': invoice.infilefel_void_uuid,
+                    'Content-Type': 'application/json',
+                }
+                data = {
+                    'nit_emisor': invoice.company_id.vat.replace('-', '') if invoice.company_id.vat else 'C/F',
+                    'correo_copia': 'ORamirezO@gmail.com',
+                    'xml_dte': xmlb64
+                }
+                # data = '<?xml version="1.0" encoding="UTF-8" standalone="no"?><AnulaDocumentoXMLRequest id="{}"><xml_dte><![CDATA[{}]]></xml_dte></AnulaDocumentoXMLRequest>'.format(
+                #     invoice.infilefel_void_uuid.upper(), xml)
+                try:
+                    response = requests.post(self.ws_url_void, headers=headers, data=json.dumps(data))
+                    if response.ok:
+                        result = json.loads(response.text)
+                        if result['resultado']:
+                            invoice.write({
+                                'infilefel_void_sat_uuid': result['uuid'],
+                                'infilefel_void_source_xml': source_xml,
+                                'infilefel_void_signed_xml': xml,
+                                'infilefel_void_result_xml': result['xml_certificado'],
+                            })
+                            invoice.action_invoice_cancel()
+                        else:
+                            error_message = u''
+                            if type(result['descripcion_errores']) is list:
+                                for message in result['descripcion_errores']:
+                                    error_message += '\n{}: {}'.format(message['fuente'], message['mensaje_error'])
+                            else:
+                                error_message += '\n{}: {}'.format(
+                                    result['RegistraDocumentoXMLResponse']['listado_errores']['error']['cod_error'],
+                                    result['RegistraDocumentoXMLResponse']['listado_errores']['error'][
+                                        'desc_error'])
+                            raise UserError(error_message)
+                    else:
+                        raise UserError(
+                            _('infilefel: Response error consuming web service: {}').format(str(response.text)))
+
+                except Exception as e:
+                    error_message = ''
+                    if hasattr(e, 'object'):
+                        if hasattr(e, 'reason'):
+                            error_message = u"{}: {}".format(e.reason, e.object)
+                        else:
+                            error_message = u" {}".format(e.object)
+                    elif hasattr(e, 'message'):
+                        error_message = e.message
+                    elif hasattr(e, 'name'):
+                        error_message = e.name
+                    else:
+                        error_message = e
+                    raise UserError(_('infilefel: Error consuming web service: {}').format(error_message))
+            else:
+                raise UserError(_('infilefel: API key not set'))
 
 class infilefel_config_settings(models.TransientModel):
     _inherit = 'res.config.settings'
@@ -805,27 +843,38 @@ class infilefel_config_settings(models.TransientModel):
             value = settings[0].excempt_scenery
         return value
 
-    ws_url_token = fields.Char('Token web service URL', default_model='infilefel.config.settings', default=_default_ws_url_token)
-    ws_url_document = fields.Char('Document web service URL', default_model='infilefel.config.settings', default=_default_ws_url_document)
-    ws_url_void = fields.Char('Void document web service URL', default_model='infilefel.config.settings', default=_default_ws_url_void)
-    ws_url_signer = fields.Char('Signer web service URL', default_model='infilefel.config.settings', default = _default_ws_url_signer)
-    ws_timeout = fields.Integer('Web service timeout', default_model='infilefel.config.settings', default=_default_ws_timeout)
+    ws_url_token = fields.Char('Token web service URL', default_model='infilefel.config.settings',
+                               default=_default_ws_url_token)
+    ws_url_document = fields.Char('Document web service URL', default_model='infilefel.config.settings',
+                                  default=_default_ws_url_document)
+    ws_url_void = fields.Char('Void document web service URL', default_model='infilefel.config.settings',
+                              default=_default_ws_url_void)
+    ws_url_signer = fields.Char('Signer web service URL', default_model='infilefel.config.settings',
+                                default=_default_ws_url_signer)
+    ws_timeout = fields.Integer('Web service timeout', default_model='infilefel.config.settings',
+                                default=_default_ws_timeout)
     user = fields.Char('Certification user', default_model='infilefel.config.settings', default=_default_user)
     sign_user = fields.Char('Sign user', default_model='infilefel.config.settings', default=_default_sign_user)
     api_key = fields.Char('API Key', default_model='infilefel.config.settings', default=_default_api_key)
     sign_key = fields.Char('Sign Key', default_model='infilefel.config.settings', default=_default_sign_key)
-    certification_key = fields.Char('Certification Key', default_model='infilefel.config.settings', default=_default_certification_key)
+    certification_key = fields.Char('Certification Key', default_model='infilefel.config.settings',
+                                    default=_default_certification_key)
     token = fields.Char('Token', default_model='infilefel.config.settings', default=_default_token)
-    token_due_date = fields.Datetime('Token due date', default_model='infilefel.config.settings', default=_default_token_due_date)
+    token_due_date = fields.Datetime('Token due date', default_model='infilefel.config.settings',
+                                     default=_default_token_due_date)
     infile_vat = fields.Char('InFile VAT', default_model='infilefel.config.settings', default=_default_infile_vat)
-    certificate_file = fields.Char('Certificate file', default_model='infilefel.config.settings', default=_default_certificate_file)
-    certificate_password = fields.Char('Certificate password', default_model='infilefel.config.settings', default=_default_certificate_password)
+    certificate_file = fields.Char('Certificate file', default_model='infilefel.config.settings',
+                                   default=_default_certificate_file)
+    certificate_password = fields.Char('Certificate password', default_model='infilefel.config.settings',
+                                       default=_default_certificate_password)
     signing_type = fields.Selection([
         ('LOCAL', 'Sign documents using local program'),
         ('WS', 'Sign documents using Web Service'),
     ], string='Signing type', default_model='infilefel.config.settings', default=_default_signing_type)
-    signer_location = fields.Char('Signer program location', default_model='infilefel.config.settings', default=_default_signer_location)
-    organization_code = fields.Char('Organization code', default_model='infilefel.config.settings', default=_default_organization_code)
+    signer_location = fields.Char('Signer program location', default_model='infilefel.config.settings',
+                                  default=_default_signer_location)
+    organization_code = fields.Char('Organization code', default_model='infilefel.config.settings',
+                                    default=_default_organization_code)
     vat_affiliation = fields.Selection([
         ('GEN', 'GEN'),
         ('EXE', 'EXE'),
@@ -833,7 +882,8 @@ class infilefel_config_settings(models.TransientModel):
     ], string='VAT affiliation', default_model='infilefel.config.settings', default=_default_vat_affiliation)
     isr_scenery = fields.Char('ISR scenery', default_model='infilefel.config.settings', default=_default_isr_scenery)
     isr_phrases = fields.Char('ISR phrases', default_model='infilefel.config.settings', default=_default_isr_phrases)
-    excempt_scenery = fields.Char('Excempt scenery', default_model='infilefel.config.settings', default=_default_excempt_scenery)
+    excempt_scenery = fields.Char('Excempt scenery', default_model='infilefel.config.settings',
+                                  default=_default_excempt_scenery)
 
     @api.multi
     def execute(self):
@@ -884,7 +934,8 @@ class infilefel_config_settings(models.TransientModel):
                     headers = {
                         'Content-Type': 'application/xml',
                     }
-                    data = "<SolicitaTokenRequest><usuario>{}</usuario><apikey>{}</apikey></SolicitaTokenRequest>".format(self.user, self.api_key)
+                    data = "<SolicitaTokenRequest><usuario>{}</usuario><apikey>{}</apikey></SolicitaTokenRequest>".format(
+                        self.user, self.api_key)
                     try:
                         response = requests.post(self.ws_url_token, headers=headers, data=data)
                     except Exception as e:

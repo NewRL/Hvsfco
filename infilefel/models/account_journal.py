@@ -9,13 +9,6 @@ class infilefel_account_journal(models.Model):
         ('', ''),
         ('FACT', 'FACT'),
         ('FCAM', 'FCAM'),
-        ('FPEQ', 'FPEQ'),
-        ('FCAP', 'FCAP'),
-        ('FESP', 'FESP'),
-        ('NABN', 'NABN'),
-        ('RDON', 'RDON'),
-        ('RECI', 'RECI'),
-        ('NDEB', 'NDEB'),
         ('NCRE', 'NCRE'),
     ], string='FEL Invoice type', default='')
     infilefel_previous_authorization = fields.Char('Previous invoice authorization')
