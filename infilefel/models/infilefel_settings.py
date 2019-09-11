@@ -5,6 +5,7 @@ import requests
 import xml.etree.cElementTree as ElementTree
 from datetime import datetime, timedelta
 import pytz
+import time
 import uuid
 import xmltodict
 import os
