@@ -1,0 +1,57 @@
+1.0.1                             	 10/11/2018
+===============================================
+First Release for v12
+
+1.0.2                             	 01/01/2018
+===============================================
+Improved code to set proper date on discharge
+
+1.0.3                                12/01/2019
+===============================================
+Added kanban view for bed
+Ward Patient list report.
+Improved report views
+
+1.0.4                                12/01/2019
+===============================================
+Allow duplication of bed and ward.
+Show departments on user properly.
+
+1.0.5                              29/01/2019
+=============================================
+Added .pot translation file
+
+1.0.6                              26/02/2019
+=============================================
+Fixed issue of setting default value.
+
+1.0.7                              05/03/2019
+=============================================
+Added validation to avoid blocking of 
+hospitalization for same patient 2 times.
+
+1.0.8                              15/04/2019
+=============================================
+Improved Typo and code.
+
+1.0.9                              17/04/2019
+=============================================
+Added Death register Functionality
+
+1.0.10                             23/04/2019
+=============================================
+Added domain on department to allow
+hms department selection only 
+
+1.0.11                             25/05/2019
+=============================================
+Improved code for adding default date and qty
+ in consumed products of hospitalization 
+
+1.0.12                             29/05/2019
+=============================================
+Added Multi Company Configuration in HMS
+
+1.0.13                             31/09/2019
+=============================================
+Improved code for adding Ward menu.
