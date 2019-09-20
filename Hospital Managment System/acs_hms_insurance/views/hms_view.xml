@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<odoo>        
+
+    <record id="view_patient_form" model="ir.ui.view">
+        <field name="name">view.hms.patient</field>
+        <field name="model">hms.patient</field>
+        <field name="inherit_id" ref="acs_hms.view_patient_form"/>
+        <field name="arch" type="xml">
+            <page name="family_note" position="before">
+                <page string="Insurance" name="Insurance">
+                    <field name="insurance_ids" colspan="4" nolabel="1">
+                        <tree editable="top">
+                            <field name="insurance_company" required="1"/>
+                            <field name="policy_number" required="1"/>
+                            <field name="insured_value" required="1"/>
+                            <field name="validity" required="1"/>
+                            <field name="active" required="1"/>
+                        </tree>
+                    </field>
+                </page>
+            </page>
+        </field>
+    </record>
+
+    <!-- Hospitalization -->
+    <record id="view_acs_hospitalization_form" model="ir.ui.view">
+        <field name="name">view.hospitalization.claim.form</field>
+        <field name="model">acs.hospitalization</field>
+        <field name="inherit_id" ref="acs_hms_hospitalization.view_acs_hospitalization_form"/>
+        <field name="arch" type="xml">
+            <button name="action_create_invoice" position="after">
+                <button name="create_package_invoce" type="object" string="Create Package Bill/Invoice" attrs="{'invisible': ['|','|',('package_id', '=', False), ('package_bill_created', '=', True),('package_invoice_id', '!=', False)]}"/>
+                <field name="package_bill_created" invisible="1"/>
+                <field name="package_invoice_id" invisible="1"/>
+            </button>
+            <button name="view_invoice" position="after">
+                <button name="action_patient_doc_view" string="Patient Doc" type="object" class="oe_stat_button" icon="fa-pencil-square-o"/>
+                <button name="action_claim_view" string="Claims" type="object" class="oe_stat_button" icon="fa-pencil-square-o" groups="acs_hms_insurance.group_hms_insurance_officer"/>
+            </button>
+            <xpath expr="//field[@name='relative_number']" position="after">
+                <field name="cashless"/>
+                <field name="package_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!-- Invoice -->
+    <record id="invoice_form" model="ir.ui.view">
+        <field name="name">account.invoice.form</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="claim_id"/>
+                <field name="insurance_company_id"/>
+            </field>
+        </field>
+    </record>
+
+    <!-- Product View -->
+    <record id="view_product_simple_tree" model="ir.ui.view">
+        <field name="name">product.simple.tree</field>
+        <field name="model">product.template</field>
+        <field name="arch" type="xml">
+            <tree string="Product">
+                <field name="name"/>
+                <field name="lst_price" class="oe_list_field_cell oe_list_field_char oe_required" string="Price"/>
+            </tree>
+        </field>
+    </record>
+
+</odoo>
