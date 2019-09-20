@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_company_form" model="ir.ui.view">
+        <field name="name">res.company.form</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[last()]" position="after">
+                <page string='Hospital Configurations' name='acs_hms'>
+                    <group>
+                        <group name="appointment" string="Appointment Configurations">
+                            <field name='registration_product_id'/>
+                            <field name='consultation_product_id'/>
+                            <field name='followup_product_id'/>
+                            <field name='appointment_anytime_invoice'/>
+                            <field name='app_usage_location'/>
+                            <field name='appo_invoice_advance'/>
+                            <field name='followup_days'/>
+                        </group>
+                        <group name="other" string="Other Configurations">
+                            <field name='birthday_mail_template'/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

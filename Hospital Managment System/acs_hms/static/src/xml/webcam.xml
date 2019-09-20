@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="branding" xml:space="preserve">
+
+    <t t-name="photo_action" class="oe_patient_webcam oe_patient_webcam_stopped">
+        <div id="container">
+            <div id="o_form_sheet">
+                <div class="row">
+                    <div class="col-md-2"/>
+                    <div class="col-md-8">
+                        <h2 class="oe_patient_webcam_heading text-center mt32"><strong>Take a Photo</strong></h2>
+                        <div id="webcam">
+                            <span></span>
+                        </div>
+                        <canvas id="canvas" width="320" height="240"></canvas>
+                    </div>
+                    <div class="col-md-2"/>
+                    <!-- <ul id="cams"></ul> -->
+                </div>
+                <div class="text-center">
+                    <div>
+                        <a href="javascript:webcam.capture();void(0);">
+                            <button class="btn btn-primary">Take Picture &amp; Set</button>
+                        </a>
+                        <span class="oe_patient_webcam_close">
+                            <a href="#">
+                                <button class="btn btn-primary">Close</button>
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>
