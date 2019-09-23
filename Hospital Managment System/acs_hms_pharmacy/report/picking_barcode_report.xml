@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_picking_barcode">
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <t t-foreach="docs" t-as="o">
+                    <t t-foreach="range(o.starting_position)" t-as="s">
+                        <div style="width:144px;height:79.49px;float:left;margin:0 2px;font-size:8px">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                </td>
+                            </tr>
+                        </table>
+                        </div>
+                    </t>
+                    <t t-foreach="o.product_barcode_line" t-as="line">
+                        <t t-foreach="range(line.quantity)" t-as="quantity_data">
+                            <div style="width:144px;height:79.49px;float:left;margin:0 2px;font-size:8px;margin-bottom:1px;border:0px solid #fff;margin-left:2px;">
+                            <table class="table ">
+                                <tr>
+                                    <td style="float:left;">
+                                        <span style="float:left;margin-left:4px;"><b t-field="line.lot_id.life_date" t-options="{&quot;format&quot;: &quot;d/M/y&quot;}" /></span>
+                                        <span style="float:right; margin-right:4px;"><b>₹</b></span>
+                                        <b style="float:right;"><span t-field="line.lot_id.mrp"/></b>
+                                        <center>
+                                            <img t-if="line.lot_id.name" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' %('EAN13',line.lot_id.name,200,100)" style="width:90px;height:30px;" />
+                                        </center>
+                                        <center>
+                                            <strong t-field="line.lot_id.name" />
+                                        </center>
+                                        <center>
+                                            <strong t-field="line.lot_id.product_id.name" style="font-size:8px" />
+                                        </center>
+                                    </td>
+                                </tr>
+                            </table>
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <report id="action_stock_picking_barcode"
+        model="stock.picking.barcode"
+        report_type="qweb-pdf"
+        name="acs_hms_pharmacy.report_picking_barcode"
+        string="Product BarCode"
+        file="acs_hms_pharmacy.report_picking_barcode"/>
+
+    <!-- <record id="action_stock_picking_barcode" model="ir.actions.report.xml">
+        <field name="paperformat_id" ref="acs_hms_pharmacy.paperformat_acs_barcode"/>
+    </record>-->
+
+</odoo>
