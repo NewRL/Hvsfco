@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Company View -->
+    <record id="view_company_form" model="ir.ui.view">
+        <field name="name">res.company.form</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="acs_hms.view_company_form"/>
+        <field name="arch" type="xml">
+            <group name="other" position="inside">
+                <field name='usage_location'/>
+            </group>
+        </field>
+    </record>
+
+    <!-- Invoice -->
+    <record id="invoice_form" model="ir.ui.view">
+        <field name="name">account.invoice.form</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <field name="user_id" position="after">
+                <field name="hospitalization_id"/>
+            </field>
+        </field>
+    </record>
+ 
+    <!-- Prescription Views -->
+    <record id="acs_outpatient_prescription_view_form" model="ir.ui.view">
+        <field name="name">acs.outpatient.prescription.view.form</field>
+        <field name="model">prescription.order</field>
+        <field name="priority" eval="8" />
+        <field name="inherit_id" ref="acs_hms.view_hms_prescription_order_form" />
+        <field name="arch" type="xml">
+            <field name="appointment" position="after">
+                <field name="hospitalization_id"/>
+                <field name="ward_id"/>
+                <field name="bed_id"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_hms_prescription_order_search" model="ir.ui.view">
+        <field name="name">acs.inpatient.prescription.view.search</field>
+        <field name="model">prescription.order</field>
+        <field name="inherit_id" ref="acs_hms.view_hms_prescription_order_search" />
+        <field name="arch" type="xml">
+            <field name="prescription_date" position="before">
+                <field name="hospitalization_id"/>
+            </field>
+            <filter name="today" position="before">
+                <filter name="group_by_hospitalization" string="Hospitalization" domain="[]" context="{'group_by':'hospitalization_id'}" />
+            </filter>
+        </field>
+    </record>
+
+    <!-- Appointment View -->
+    <record id="view_hms_appointment_hospital" model="ir.ui.view">
+        <field name="name">hms.appointment.form</field>
+        <field name="model">hms.appointment</field>
+        <field name="inherit_id" ref='acs_hms.view_hms_appointment_form'/>
+        <field name="arch" type="xml">
+            <button name="view_invoice" position="before">
+                <button name="button_hospitalize" string="Hospitalization" type="object" states="in_consultation,invoiced,done,sr_dr" class="oe_stat_button" icon="fa-pencil-square-o"/>
+            </button>
+        </field>
+    </record>
+
+    <!-- Include the Surgery page into the Patient History -->
+    <record model="ir.ui.view" id="hms_patient_view">
+        <field name="name">Patient</field>
+        <field name="model">hms.patient</field>
+        <field name="inherit_id" ref="acs_hms.view_patient_form" />
+        <field name="arch" type="xml">
+            <field name="date_of_death" position="before">
+                <field name="death_register_id"/>
+            </field>
+            <button name="view_invoices" position="after">
+                <button name="action_hospitalization" string="Hospitalization" type="object" class="oe_stat_button" icon="fa-bed"/>
+                <button name="action_view_surgery" string="Surgery" type="object" class="oe_stat_button" icon="fa-bed"/>
+            </button>
+            <xpath expr="//notebook/page[@name='diseases']" position="after">
+                <page name="surgery" string="Surgerys">
+                    <group string="Past Surgerys">
+                        <field name="past_surgeries_ids" colspan="4" nolabel="1">
+                            <tree editable="top">
+                                <field name="date"/>
+                                <field name="description"/>
+                                <field name="complication"/>
+                                <field name="result"/>
+                                <field name="hosp_or_doctor"/>
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

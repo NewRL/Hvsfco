@@ -1,0 +1,528 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* acs_hms_commission
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-29 15:40+0000\n"
+"PO-Revision-Date: 2019-07-16 12:55+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 2.2.3\n"
+"Last-Translator: \n"
+"Language: ar_SA\n"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_commission_invoice__print_commission
+msgid "Add Commision no in Description"
+msgstr "أضف العمولة في الوصف"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: acs_hms_commission
+#: model:ir.actions.act_window,name:acs_hms_commission.acs_hms_commission_action
+#: model:ir.model.fields,field_description:acs_hms_commission.field_res_partner__commission_ids
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.acs_hms_commission_search_view
+msgid "Business Commission"
+msgstr "عمولة الأعمال"
+
+#. module: acs_hms_commission
+#: model:ir.ui.menu,name:acs_hms_commission.menu_acs_hms_commission
+#: model:ir.ui.menu,name:acs_hms_commission.menu_invoice_acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.acs_hms_commission_list_view
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.acs_hms_commission_search_view
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.view_order_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.view_partner_form
+msgid "Business Commissions"
+msgstr "عمولات الأعمال"
+
+#. module: acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.acs_hms_commission_form_view
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.view_commission_invoice
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: acs_hms_commission
+#: selection:acs.hms.commission,invoice_status:0
+msgid "Canceled"
+msgstr "ملغي"
+
+#. module: acs_hms_commission
+#: selection:acs.hms.commission,state:0
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: acs_hms_commission
+#: model_terms:ir.actions.act_window,help:acs_hms_commission.acs_hms_commission_action
+msgid "Click to define a new Business Commission."
+msgstr "اضغط لضبط عمولة جديده."
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__commission_amount
+msgid "Commission Amount"
+msgstr "قيمة العمولة"
+
+#. module: acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.view_company_form
+msgid "Commission Configurations"
+msgstr "مكونات العموله"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_account_invoice__commission_created
+msgid "Commission Created"
+msgstr "عمولة محرره"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_account_invoice__commission_on
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__commission_on
+msgid "Commission On"
+msgstr "عموله في"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__commission_percentage
+#: model:ir.model.fields,field_description:acs_hms_commission.field_res_partner__commission_percentage
+msgid "Commission Percentage"
+msgstr "نسبة العموله"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_res_company__commission_product_id
+msgid "Commission Product"
+msgstr "منتج العموله"
+
+#. module: acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.acs_hms_commission_form_view
+msgid "Commission Title"
+msgstr "موضوع العموله"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_res_company__commission_on_invoice_amount
+msgid "Commission on Invoice Amount"
+msgstr "عموله على قيمة الفاتورة"
+
+#. module: acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.view_partner_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.view_physician_form
+msgid "Commissions"
+msgstr "العمولات"
+
+#. module: acs_hms_commission
+#: model:ir.model,name:acs_hms_commission.model_res_partner
+msgid "Contact"
+msgstr "جهات الاتصال"
+
+#. module: acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.view_order_form
+msgid "Create Commission"
+msgstr "إنشاء عموله"
+
+#. module: acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.view_commission_invoice
+msgid "Create Invoices"
+msgstr "إنشاء فاتورة"
+
+#. module: acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.view_commission_invoice
+msgid "Create and View Invoices"
+msgstr "إنشاء و عرض الفواتير"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__create_uid
+#: model:ir.model.fields,field_description:acs_hms_commission.field_commission_invoice__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__create_date
+#: model:ir.model.fields,field_description:acs_hms_commission.field_commission_invoice__create_date
+msgid "Created on"
+msgstr "تاريخ الإنشاء"
+
+#. module: acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.acs_hms_commission_search_view
+msgid "Customer"
+msgstr "العملاء"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__display_name
+#: model:ir.model.fields,field_description:acs_hms_commission.field_commission_invoice__display_name
+msgid "Display Name"
+msgstr "عرض الاسم"
+
+#. module: acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.acs_hms_commission_form_view
+msgid "Done"
+msgstr "مكتمل"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_account_invoice__commission_partner1_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.view_order_form
+msgid "Dr. Commission"
+msgstr "عمولة الطبيب"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_account_invoice__commission_amount1
+msgid "Dr. Commission Amount"
+msgstr "قيمة عمولة الطبيب"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_account_invoice__commission_percentage1
+msgid "Dr. Commission Percentage"
+msgstr "نسبة عمولة الطبيب"
+
+#. module: acs_hms_commission
+#: selection:acs.hms.commission,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: acs_hms_commission
+#: selection:acs.hms.commission,invoice_status:0
+msgid "Draft Invoice"
+msgstr "مسودة فاتورة"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_res_partner__provide_commission
+msgid "Give Commission"
+msgstr "سدد العمولة"
+
+#. module: acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.acs_hms_commission_search_view
+msgid "Group By"
+msgstr "مجموعة حسب"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_commission_invoice__groupby_partner
+msgid "Groupby Partner"
+msgstr "مجموعة حسب شريك"
+
+#. module: acs_hms_commission
+#: model:ir.model,name:acs_hms_commission.model_res_company
+msgid "Hospital"
+msgstr "المستشفى"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__id
+#: model:ir.model.fields,field_description:acs_hms_commission.field_commission_invoice__id
+msgid "ID"
+msgstr "رقم التعريف"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,help:acs_hms_commission.field_acs_hms_commission__message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,help:acs_hms_commission.field_acs_hms_commission__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,help:acs_hms_commission.field_acs_hms_commission__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: acs_hms_commission
+#: model:ir.model,name:acs_hms_commission.model_account_invoice
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__invoice_id
+msgid "Invoice"
+msgstr "الفاتورة"
+
+#. module: acs_hms_commission
+#: model:ir.actions.act_window,name:acs_hms_commission.action_view_commission_invoice
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.view_commission_invoice
+msgid "Invoice Commission"
+msgstr "عمولة على الفاتورة"
+
+#. module: acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.view_commission_invoice
+msgid ""
+"Invoices will be created in draft so that you can review\n"
+"                    them before validation."
+msgstr ""
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission____last_update
+#: model:ir.model.fields,field_description:acs_hms_commission.field_commission_invoice____last_update
+msgid "Last Modified on"
+msgstr "اخر تعديل في"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__write_uid
+#: model:ir.model.fields,field_description:acs_hms_commission.field_commission_invoice__write_uid
+msgid "Last Updated by"
+msgstr "اخر تحديث بواسطة"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__write_date
+#: model:ir.model.fields,field_description:acs_hms_commission.field_commission_invoice__write_date
+msgid "Last Updated on"
+msgstr "اخر تحديث في"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفقات الأساسية"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: acs_hms_commission
+#: selection:acs.hms.commission,invoice_status:0
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.acs_hms_commission_search_view
+msgid "Not Invoiced"
+msgstr "غير مفوترة"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__note
+msgid "Note"
+msgstr "ملاحظه"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,help:acs_hms_commission.field_acs_hms_commission__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل المحتاجة لإجراء"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,help:acs_hms_commission.field_acs_hms_commission__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,help:acs_hms_commission.field_acs_hms_commission__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الغير مقروءه"
+
+#. module: acs_hms_commission
+#: selection:acs.hms.commission,invoice_status:0
+msgid "Open"
+msgstr "فتح"
+
+#. module: acs_hms_commission
+#: selection:acs.hms.commission,invoice_status:0
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__partner_id
+msgid "Partner"
+msgstr "شريك"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__payment_invoice_id
+msgid "Payment Invoice"
+msgstr "فاتورة الدفع"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__invoice_line_id
+msgid "Payment Invoice Line"
+msgstr "خط فاتورة الدفع"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__invoice_status
+msgid "Payment Invoice Status"
+msgstr "حالة فاتورة الدفع"
+
+#. module: acs_hms_commission
+#: model:ir.model,name:acs_hms_commission.model_hms_physician
+msgid "Physician"
+msgstr "الطبيب"
+
+#. module: acs_hms_commission
+#: code:addons/acs_hms_commission/wizard/commission_make_invoice.py:96
+#, python-format
+msgid ""
+"Please check there is nothing to invoice in selected Commission may be you "
+"are missing partner or trying to invoice already invoiced Commissions."
+msgstr ""
+
+#. module: acs_hms_commission
+#: code:addons/acs_hms_commission/wizard/commission_make_invoice.py:66
+#, python-format
+msgid "Please set Commission Product in company first."
+msgstr ""
+
+#. module: acs_hms_commission
+#: selection:acs.hms.commission,invoice_status:0
+msgid "Profoma"
+msgstr ""
+
+#. module: acs_hms_commission
+#: selection:acs.hms.commission,invoice_status:0
+msgid "Profoma2"
+msgstr ""
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_account_invoice__commission_partner2_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.view_order_form
+msgid "Ref. Dr. Commission"
+msgstr "عمولة الطبيب المحول"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_account_invoice__commission_amount2
+msgid "Ref. Dr. Commission Amount"
+msgstr "قيمة عمولة الطبيب المحول"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_account_invoice__commission_percentage2
+msgid "Ref. Dr. Commission Percentage"
+msgstr "نسبة عمولة الطبيب المحول"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_account_invoice__commission_ids
+msgid "Sales Commission"
+msgstr "عمولة المبيعات"
+
+#. module: acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.acs_hms_commission_form_view
+msgid "Set to Draft"
+msgstr "ضبط مسودة"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,help:acs_hms_commission.field_commission_invoice__print_commission
+msgid "Set true if want to append SO in invoice line Description"
+msgstr ""
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,help:acs_hms_commission.field_commission_invoice__groupby_partner
+msgid "Set true if want to create single invoice for project"
+msgstr ""
+
+#. module: acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.acs_hms_commission_search_view
+msgid "State"
+msgstr "حاله"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__state
+msgid "Status"
+msgstr "الحاله"
+
+#. module: acs_hms_commission
+#: code:addons/acs_hms_commission/wizard/commission_make_invoice.py:38
+#, python-format
+msgid ""
+"There is no income account defined for this product: \"%s\". You may have to "
+"install a chart of account from Accounting app, settings menu."
+msgstr ""
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_account_invoice__commission_partner3_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.view_order_form
+msgid "Third Party Commission"
+msgstr "عمولة طرف ثالث"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_account_invoice__commission_percentage3
+msgid "Third Party Commission Percentage"
+msgstr "نسبة عمولة طرف ثالث"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_account_invoice__commission_amount3
+msgid "Third PartyCommission Amount"
+msgstr "قيمة عمولة طرف ثالث"
+
+#. module: acs_hms_commission
+#: model:ir.model,name:acs_hms_commission.model_commission_invoice
+msgid "Timesheet Invoice"
+msgstr "فاتورة ساعات العمل"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءه"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل الغير مقروءه"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,field_description:acs_hms_commission.field_acs_hms_commission__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الويب"
+
+#. module: acs_hms_commission
+#: model:ir.model.fields,help:acs_hms_commission.field_acs_hms_commission__website_message_ids
+msgid "Website communication history"
+msgstr "سجل اتصالات الموقع"
+
+#. module: acs_hms_commission
+#: code:addons/acs_hms_commission/models/commission.py:55
+#, python-format
+msgid "You cannot delete an record which is not draft or cancelled."
+msgstr ""
+
+#. module: acs_hms_commission
+#: model:ir.model,name:acs_hms_commission.model_acs_hms_commission
+msgid "acs.hms.commission"
+msgstr ""
+
+#. module: acs_hms_commission
+#: selection:acs.hms.commission,state:0
+msgid "done"
+msgstr "مكتمل"
+
+#. module: acs_hms_commission
+#: model_terms:ir.ui.view,arch_db:acs_hms_commission.acs_hms_commission_form_view
+msgid "e.g. Business Commission"
+msgstr ""
+
+#. module: acs_hms_commission
+#: model:ir.model,name:acs_hms_commission.model_hms_appointment
+msgid "hms.appointment"
+msgstr "مواعيد النظام الطبي"

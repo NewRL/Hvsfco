@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+action_acs_vaccination,vaacination vaccination,model_acs_vaccination,acs_hms.group_hms_user,1,0,0,0
+action_acs_vaccination_receptionist,vaacination receptionist,model_acs_vaccination,acs_hms.group_hms_receptionist,1,1,1,0
+action_acs_vaccination_jr_dr,vaacination jr Dr,model_acs_vaccination,acs_hms.group_hms_jr_doctor,1,1,1,1
+action_vaacination_group,vaacination group vaccination,model_vaccination_group,acs_hms.group_hms_user,1,0,0,0
+action_acs_vaccination_group_receptionist,vaacination group receptionist,model_vaccination_group,acs_hms.group_hms_receptionist,1,1,1,0
+action_acs_vaccination_group_jr_dr,vaacination group jr Dr,model_vaccination_group,acs_hms.group_hms_jr_doctor,1,1,1,1
+access_vaacination_group_line,vaacination group line vaccination,model_vaccination_group_line,acs_hms.group_hms_user,1,0,0,0
+action_acs_vaccination_group_line_receptionist,vaacination group line receptionist,model_vaccination_group_line,acs_hms.group_hms_receptionist,1,1,1,0
+action_acs_vaccination_group_line_jr_dr,vaacination group line jr Dr,model_vaccination_group_line,acs_hms.group_hms_jr_doctor,1,1,1,1

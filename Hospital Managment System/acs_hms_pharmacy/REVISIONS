@@ -1,0 +1,45 @@
+1.0.1                             10/11/2018
+============================================
+First Release for v12
+
+1.0.2                             03/01/2019
+============================================
+Removed Duplicate Menus for medicament 
+configuration objects.
+
+1.0.3                              29/01/2019
+=============================================
+Added .pot translation file
+
+1.0.4                              29/02/2019
+=============================================
+Improved code to bock selection of lot where 
+available qty is less than invoice qty.
+
+1.0.5                              19/03/2019
+=============================================
+Block lot only on customer invoice.
+
+1.0.6                              20/03/2019
+=============================================
+Set po uom on vendor bill.Fixed expiry 
+date issue. Added mrp in simple lot view.
+
+1.0.7                              17/06/2019
+=============================================
+Fixed issue of UOM Conversion.
+
+1.0.8                              20/07/2019
+=============================================
+Hide manufacturer if product is not medicine
+Make Create stock moves by default False.
+
+1.0.9                               24/07/2019
+==============================================
+Fixed issue of duplicate string.
+
+1.0.10                              24/07/2019
+==============================================
+Improved code for default value in picking 
+barcode.
+Improved code to print lot and date in invoice.

@@ -1,0 +1,544 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* acs_hms_vaccination
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-29 15:47+0000\n"
+"PO-Revision-Date: 2019-07-18 10:46+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n"
+"%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 2.2.3\n"
+"Last-Translator: \n"
+"Language: ar_SA\n"
+
+#. module: acs_hms_vaccination
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_acs_vaccination_search
+msgid "ACS Vaccination"
+msgstr ""
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__message_needaction
+msgid "Action Needed"
+msgstr "مطلوب اجراء"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__activity_ids
+msgid "Activities"
+msgstr "النشاطات"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_res_company__vaccination_invoicing
+msgid "Allow Vaccination Invoicing"
+msgstr "السماح بفواتير التطعيم"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__batch_image
+msgid "Batch Photo"
+msgstr "رقم المجموعه"
+
+#. module: acs_hms_vaccination
+#: selection:product.template,hospital_product_type:0
+msgid "Bed"
+msgstr "سرير"
+
+#. module: acs_hms_vaccination
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_vaccination_vac_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: acs_hms_vaccination
+#: selection:acs.vaccination,state:0
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: acs_hms_vaccination
+#: model_terms:ir.actions.act_window,help:acs_hms_vaccination.action_hms_vaccination_group
+msgid "Click to add a Vaccination Group."
+msgstr "انقر لإضافة مجموعة التطعيم."
+
+#. module: acs_hms_vaccination
+#: model_terms:ir.actions.act_window,help:acs_hms_vaccination.action_vaccination_vac
+msgid "Click to add a Vaccination."
+msgstr "انقر لإضافة تطعيم."
+
+#. module: acs_hms_vaccination
+#: selection:product.template,hospital_product_type:0
+msgid "Consultation"
+msgstr "استشارة"
+
+#. module: acs_hms_vaccination
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_vaccination_vac_form
+msgid "Create Invoice"
+msgstr "إنشاء فاتوره"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__create_uid
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group__create_uid
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group_line__create_uid
+msgid "Created by"
+msgstr "منشأ بواسطه"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__create_date
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group__create_date
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group_line__create_date
+msgid "Created on"
+msgstr "منشأ في"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group_line__date_due_day
+msgid "Days to add"
+msgstr "أيام للإضافة"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,help:acs_hms_vaccination.field_vaccination_group_line__date_due_day
+msgid "Days to add for next date"
+msgstr "أيام للإضافة للتاريخ التالي"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__display_name
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group__display_name
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group_line__display_name
+msgid "Display Name"
+msgstr "عرض الاسم"
+
+#. module: acs_hms_vaccination
+#: selection:acs.vaccination,state:0
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_vaccination_vac_form
+msgid "Done"
+msgstr "مكتمل"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__dose
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_acs_vaccination_search
+msgid "Dose #"
+msgstr "جرعة #"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__due_date
+msgid "Due Date"
+msgstr "تاريخ الاستحقاق"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: acs_hms_vaccination
+#: selection:product.template,hospital_product_type:0
+msgid "Food & Drinks"
+msgstr "طعام ومشروبات"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__given_date
+msgid "Given Date"
+msgstr "تاريخ معين"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group_line__group_id
+msgid "Group"
+msgstr "مجموعه"
+
+#. module: acs_hms_vaccination
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_acs_vaccination_search
+msgid "Group By..."
+msgstr "مجموعة حسب"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group__name
+msgid "Group Name"
+msgstr "اسم المجموعه"
+
+#. module: acs_hms_vaccination
+#: model:ir.model,name:acs_hms_vaccination.model_res_company
+msgid "Hospital"
+msgstr "المستشفى"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_product_template__hospital_product_type
+msgid "Hospital Product Type"
+msgstr "اسم منتج المستشفى"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__id
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group__id
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group_line__id
+msgid "ID"
+msgstr "الهويه"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,help:acs_hms_vaccination.field_acs_vaccination__message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,help:acs_hms_vaccination.field_acs_vaccination__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,help:acs_hms_vaccination.field_acs_vaccination__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: acs_hms_vaccination
+#: selection:product.template,hospital_product_type:0
+msgid "Insurance Plan"
+msgstr "خطة التأمين"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__invoice_id
+msgid "Invoice"
+msgstr "الفاتورة"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination____last_update
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group____last_update
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group_line____last_update
+msgid "Last Modified on"
+msgstr "اخر تعديل في"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__write_uid
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group__write_uid
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group_line__write_uid
+msgid "Last Updated by"
+msgstr "اخر تحديث بواسطه"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__write_date
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group__write_date
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__vaccine_lot
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_acs_vaccination_search
+msgid "Lot Number"
+msgstr ""
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفقات الأساسية"
+
+#. module: acs_hms_vaccination
+#: selection:product.template,hospital_product_type:0
+msgid "Medicament"
+msgstr "الدواء"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group__group_line
+msgid "Medicament line"
+msgstr "خط الدواء"
+
+#. module: acs_hms_vaccination
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_hms_vaccination_group_form
+msgid "Medicaments Group"
+msgstr "مجموعة الأدوية"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__name
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_acs_vaccination_search
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_vaccination_vac_form
+msgid "Name"
+msgstr "الإسم"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: acs_hms_vaccination
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_acs_vaccination_search
+msgid "Next Dose"
+msgstr "الجرعة التالية"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__next_dose_date
+msgid "Next Dose Date"
+msgstr "تاريخ الجرعة التالية"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,help:acs_hms_vaccination.field_acs_vaccination__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,help:acs_hms_vaccination.field_acs_vaccination__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,help:acs_hms_vaccination.field_acs_vaccination__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الغير مقروءه"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__observations
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_acs_vaccination_search
+msgid "Observations"
+msgstr "الملاحظات الطبيه"
+
+#. module: acs_hms_vaccination
+#: selection:product.template,hospital_product_type:0
+msgid "Other Service"
+msgstr "خدمة أخرى"
+
+#. module: acs_hms_vaccination
+#: selection:acs.vaccination,activity_state:0
+msgid "Overdue"
+msgstr "متأخر"
+
+#. module: acs_hms_vaccination
+#: selection:product.template,hospital_product_type:0
+msgid "Pathology"
+msgstr "علم الأمراض"
+
+#. module: acs_hms_vaccination
+#: model:ir.model,name:acs_hms_vaccination.model_hms_patient
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__patient_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_acs_vaccination_search
+msgid "Patient"
+msgstr "المريض"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__physician_id
+msgid "Physician"
+msgstr "الطبيب"
+
+#. module: acs_hms_vaccination
+#: selection:acs.vaccination,activity_state:0
+msgid "Planned"
+msgstr "مخطط"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,help:acs_hms_vaccination.field_acs_vaccination__vaccine_lot
+msgid ""
+"Please check on the vaccine (product) production lot numberand tracking "
+"number when available !"
+msgstr "يرجى التحقق من رقم كمية إنتاج اللقاح (المنتج) ورقم التتبع عند توفره!"
+
+#. module: acs_hms_vaccination
+#: selection:product.template,hospital_product_type:0
+msgid "Procedure"
+msgstr "إجراء"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_vaccination_group_line__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: acs_hms_vaccination
+#: model:ir.model,name:acs_hms_vaccination.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: acs_hms_vaccination
+#: selection:product.template,hospital_product_type:0
+msgid "Radiology"
+msgstr "الاشعة"
+
+#. module: acs_hms_vaccination
+#: code:addons/acs_hms_vaccination/models/vaccination.py:110
+#, python-format
+msgid "Record can be deleted only in Cancelled state."
+msgstr ""
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__activity_user_id
+msgid "Responsible User"
+msgstr "الحساب المسؤول"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_hms_patient__vaccination_on_dob
+msgid "Schedule on DOB"
+msgstr "جدول على تاريخ الميلاد"
+
+#. module: acs_hms_vaccination
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_vaccination_vac_form
+msgid "Shedule"
+msgstr "جدول"
+
+#. module: acs_hms_vaccination
+#: selection:acs.vaccination,state:0
+msgid "Sheduled"
+msgstr "مجدول"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__state
+msgid "State"
+msgstr "حاله"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,help:acs_hms_vaccination.field_acs_vaccination__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: acs_hms_vaccination
+#: selection:product.template,hospital_product_type:0
+msgid "Surgery"
+msgstr "العمليات الجراحية"
+
+#. module: acs_hms_vaccination
+#: selection:acs.vaccination,state:0
+msgid "To Invoice"
+msgstr "للفوترة"
+
+#. module: acs_hms_vaccination
+#: selection:acs.vaccination,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل الغير مقروءه"
+
+#. module: acs_hms_vaccination
+#: model:ir.actions.act_window,name:acs_hms_vaccination.action_vaccination_vac
+#: model:ir.model,name:acs_hms_vaccination.model_acs_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__product_id
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_hms_patient__vaccination_line
+#: model:ir.ui.menu,name:acs_hms_vaccination.main_menu_vaccination
+#: model:ir.ui.menu,name:acs_hms_vaccination.vaccination_menu
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_acs_vaccination_calendar
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_patient_vaccination_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_vaccination_group_list
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_vaccination_pivot
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_vaccination_vac_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_vaccination_vac_list
+#: selection:product.template,hospital_product_type:0
+msgid "Vaccination"
+msgstr "التطعيم"
+
+#. module: acs_hms_vaccination
+#: model:ir.actions.act_window,name:acs_hms_vaccination.action_hms_vaccination_group
+#: model:ir.model,name:acs_hms_vaccination.model_vaccination_group
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_hms_patient__vaccination_group_id
+#: model:ir.ui.menu,name:acs_hms_vaccination.hms_vaccination_menu
+#: model:ir.ui.menu,name:acs_hms_vaccination.vaccination_group_menu
+msgid "Vaccination Group"
+msgstr "مجموعة التطعيم"
+
+#. module: acs_hms_vaccination
+#: model:ir.model,name:acs_hms_vaccination.model_vaccination_group_line
+msgid "Vaccination Group Line"
+msgstr "خط مجموعة التطعيم"
+
+#. module: acs_hms_vaccination
+#: model:ir.ui.menu,name:acs_hms_vaccination.vaccine_menu
+#: selection:product.template,hospital_product_type:0
+msgid "Vaccine"
+msgstr "اللقاح"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,help:acs_hms_vaccination.field_acs_vaccination__product_id
+msgid ""
+"Vaccine Name. Make sure that the vaccine (product) has all the proper "
+"information at product level. Information such as provider, supplier code, "
+"tracking number, etc.. This  information must always be present. If "
+"available, please copy / scan the vaccine leaflet and attach it to this "
+"record"
+msgstr ""
+"اسم اللقاح. تأكد من أن اللقاح (المنتج) لديه كل المعلومات الصحيحة على مستوى "
+"المنتج. معلومات مثل المزود ورمز المورد ورقم التتبع ، إلخ. يجب أن تكون هذه "
+"المعلومات موجودة دائمًا. إذا كان ذلك متاحًا ، يرجى نسخ / مسح نشرة اللقاح "
+"وإرفاقها بهذا السجل"
+
+#. module: acs_hms_vaccination
+#: model:ir.actions.act_window,name:acs_hms_vaccination.product_template_action_vaccines
+msgid "Vaccines"
+msgstr "اللقاحات"
+
+#. module: acs_hms_vaccination
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_vaccination_vac_form
+msgid "View Invoice"
+msgstr "عرض الفاتورة"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,field_description:acs_hms_vaccination.field_acs_vaccination__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الويب"
+
+#. module: acs_hms_vaccination
+#: model:ir.model.fields,help:acs_hms_vaccination.field_acs_vaccination__website_message_ids
+msgid "Website communication history"
+msgstr "سجل اتصالات الويب"
+
+#. module: acs_hms_vaccination
+#: model_terms:ir.ui.view,arch_db:acs_hms_vaccination.view_patient_vaccination_form
+msgid "vaccination"
+msgstr "التطعيم"

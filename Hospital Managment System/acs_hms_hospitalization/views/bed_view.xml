@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_bed_list" model="ir.ui.view">
+        <field name="name">hospital.bed.list</field>
+        <field name="model">hospital.bed</field>
+        <field name="arch" type="xml">
+            <tree string="Bed Tree" decoration-info="state=='reserved'" decoration-success="state=='free'" decoration-danger="state=='occupied'">
+                <field name="name"/>
+                <field name="ward_id"/>
+                <field name="patient_id"/>
+                <field name="bed_type"/>
+                <field name="telephone"/>
+                <field name="state"/>
+                <field name="notes"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_bed_form" model="ir.ui.view">
+        <field name="name">bed.form</field>
+        <field name="model">hospital.bed</field>
+        <field name="arch" type="xml">
+            <form string="Bed Form">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" required="True"/>
+                            <field name="telephone"/>
+                            <field name="ward_id" required="True"/>
+                            <field name="patient_id" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="product_id" required="True" domain="[('hospital_product_type','=','bed')]" context="{'default_hospital_product_type':'bed'}"/>
+                            <field name="bed_type"/>
+                            <field name="company_id" groups="base.group_multi_company"/>
+                            <field name="state" required="True"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Bed Allocation">
+                            <group>
+                                <field name="accomodation_history_ids" colspan="4"
+                                nolabel="1">
+                                    <tree string="Line" options="{'no_create': True}">
+                                        <field name="patient_id"/>
+                                        <field name="ward_id"/>
+                                        <field name="hospitalization_id"/>
+                                        <field name="start_date"/>
+                                        <field name="end_date"/>
+                                        <field name="days"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
+                    <field name="notes" nolabel="1" placeholder="Notes..."/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="bed_search" model="ir.ui.view">
+        <field name="name">bed.search</field>
+        <field name="model">hospital.bed</field>
+        <field name="arch" type="xml">
+            <search string="Bed Search">
+                <field name="name"/>
+                <field name="telephone"/>
+                <field name="ward_id"/>
+                <newline/>
+                <group expand="0" string="Group By...">
+                    <filter name="group_by_ward" string="Ward" domain="[]" context="{'group_by':'ward_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="bed_kanban_view" model="ir.ui.view">
+        <field name="name">bed.kanban</field>
+        <field name="model">hospital.bed</field>
+        <field name="type">kanban</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="id"/>
+                <field name="name"/>
+                <field name="ward_id"/>
+                <field name="product_id"/>
+                <field name="bed_type"/>
+                <field name="state"/>
+                <field name="patient_id"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click">
+                            <div class="o_kanban_image" t-attf-style="color:#{record.state.raw_value=='reserved' ? 'blue' : record.state.raw_value=='occupied' ? 'red' : 'green'}">
+                                <span class="fa fa-bed fa-4x" aria-label="" title=""/>
+                            </div>
+                            <div class="oe_kanban_details">
+                                <strong class="oe_partner_heading"><field name="display_name"/></strong>
+                                <ul>
+                                    <li t-if="record.ward_id.raw_value"><b>Ward:</b> <field name="ward_id"/></li>
+                                    <li t-if="record.bed_type.raw_value"><b>Bed Type:</b> <field name="bed_type"/></li>
+                                    <li t-if="record.patient_id.raw_value"><b>Patient:</b> <field name="patient_id"/></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_bed">
+        <field name="name">Beds</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.bed</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Click to add a Bed.
+            </p>
+        </field>
+    </record>
+</odoo>

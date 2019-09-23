@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Under HMS menu -->
+    <menuitem id="hms_vaccination_menu" name="Vaccination Group" parent="acs_hms.menu_hms_cofig" sequence="45" action="action_hms_vaccination_group"/>
+
+    <!-- Main Vaccination -->
+    <menuitem id="main_menu_vaccination" name="Vaccination" groups="acs_hms.group_hms_receptionist" sequence="10" web_icon="acs_hms_vaccination,static/description/icon.png"/>
+
+    <menuitem id="vaccination_menu" name="Vaccination" parent="main_menu_vaccination" action="action_vaccination_vac" sequence="10"/>
+
+    <menuitem id="vaccine_menu" name="Vaccine" parent="main_menu_vaccination" action="product_template_action_vaccines" sequence="15"/>
+
+    <menuitem id="vaccination_group_menu" name="Vaccination Group" parent="main_menu_vaccination" sequence="20" action="action_hms_vaccination_group"/>
+
+</odoo>

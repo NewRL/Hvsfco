@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<odoo>
+
+    <record id="view_users_form_simple_modif" model="ir.ui.view">
+        <field name="name">res.users.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form_simple_modif"/>
+        <field name="arch" type="xml">
+            <group name="preferences" position="after">
+                <group string="Dashboard Preferences">
+                    <group>
+                        <field name="dashboard_type"/>
+                    </group>
+                    <group/>
+                </group>
+                <group>
+                    <group attrs="{'invisible': [('dashboard_type', 'not in', ['receptionist','admin'])]}">
+                        <field name="total_patients_color"/>
+                        <field name="total_open_invoice_color"/>
+                        <field name="total_treatments_color"/>
+                        <field name="total_shedules_color"/>
+                    </group>
+                    <group>
+                        <field name="birthday_color"/>
+                        <field name="appointment_bar_graph_color"/>
+                        <field name="patient_line_graph_color"/>
+                    </group>
+                </group>
+
+                <group  attrs="{'invisible': [('dashboard_type', 'not in', ['receptionist','admin'])]}">
+                    <group>
+                        <field name="total_appointments_color"/>
+                    </group>
+                    <group>
+                    </group>
+                </group>
+
+                <group  attrs="{'invisible': [('dashboard_type', '!=', 'doctor')]}">
+                    <group>
+                        <field name="my_total_patients_color"/>
+                        <field name="my_avg_time_color"/>
+                    </group>
+                    <group>
+                        <field name="my_total_appointments_color"/>
+                        <field name="my_total_treatments_color"/>
+                    </group>
+                </group>
+
+                <group  attrs="{'invisible': [('dashboard_type', '!=', 'admin')]}">
+                    <group>
+                        <field name="physicians_color"/>
+                        <field name="avg_time_color"/>
+                    </group>
+                    <group>
+                    </group>
+                </group>
+            </group>
+        </field>
+    </record>
+
+    <record id="view_users_form" model="ir.ui.view">
+        <field name="name">res.users.form</field>
+        <field name="model">res.users</field>
+        <field name="inherit_id" ref="base.view_users_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[last()]" position="after">
+                <page name="dashboard" string="Dashboard Configurations">
+                    <group>
+                        <group>
+                            <field name="dashboard_type" colspan="2" col="2"/>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                    <group>
+                        <group attrs="{'invisible': [('dashboard_type', 'not in', ['receptionist','admin'])]}">
+                            <field name="total_patients_color"/>
+                            <field name="total_open_invoice_color"/>
+                            <field name="total_treatments_color"/>
+                            <field name="total_shedules_color"/>
+                        </group>
+                        <group>
+                            <field name="birthday_color"/>
+                            <field name="appointment_bar_graph_color"/>
+                            <field name="patient_line_graph_color"/>
+                        </group>
+                    </group>
+
+                    <group  attrs="{'invisible': [('dashboard_type', 'not in', ['receptionist','admin'])]}">
+                        <group>
+                            <field name="total_appointments_color"/>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+
+                    <group  attrs="{'invisible': [('dashboard_type', '!=', 'doctor')]}">
+                        <group>
+                            <field name="my_total_patients_color"/>
+                            <field name="my_avg_time_color"/>
+                        </group>
+                        <group>
+                            <field name="my_total_appointments_color"/>
+                            <field name="my_total_treatments_color"/>
+                        </group>
+                    </group>
+
+                    <group  attrs="{'invisible': [('dashboard_type', '!=', 'admin')]}">
+                        <group>
+                            <field name="physicians_color"/>
+                            <field name="avg_time_color"/>
+                        </group>
+                        <group>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
