@@ -20,7 +20,7 @@
     'description': """Manage Patient Documents at single place or see all patinet related documents directly on patint.
     Patient Document Management System. hospital management medical management ACS HMS
     """,
-    'version': '1.0.6',
+    'version': '1.0.7',
     'category': 'Hospital Management System',
     'author': 'Almighty Consulting Services',
     'support': 'info@almightycs.com',

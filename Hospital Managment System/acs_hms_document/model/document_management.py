@@ -84,7 +84,7 @@ class Attachment(models.Model):
     is_document = fields.Boolean("Is Document")
     directory_id = fields.Many2one('document.directory', string='Directory', ondelete='restrict')
     description = fields.Text(string='Description')
-    tag_ids = fields.Many2many('document.tag', 'document_tag_rel', 'document_id', 'tag_id', 
+    tag_ids = fields.Many2many('document.tag', 'hms_document_tag_rel', 'document_id', 'tag_id', 
         string='Tags', help="Classify and analyze your Document")
 
 
