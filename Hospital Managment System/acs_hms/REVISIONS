@@ -180,3 +180,7 @@ Improved code to avoid configuration of consumed location if there is no consuma
 =======================================================================
 Improved code for adding appointment link on patient.
 Improved Medical Advice Report.
+
+1.0.40                                                       25/09/2019
+=======================================================================
+Resolved same label warnings

@@ -81,7 +81,7 @@ class ACSPatient(models.Model):
     religion = fields.Char("Religion")
     caste = fields.Char("Tribe")
     registration_product_id = fields.Many2one('product.product', default=_get_service_id, string="Registration Service")
-    invoice_id = fields.Many2one("account.invoice","Invoice")
+    invoice_id = fields.Many2one("account.invoice","Registration Invoice")
 
     @api.model
     def create(self, values):

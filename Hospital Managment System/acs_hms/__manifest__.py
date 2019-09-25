@@ -69,7 +69,7 @@
         servicios de salud administración de la salud administración de la salud departamento de salud
          gestión hospitalaria sistema de información gestión hospitalaria odoo hms odoo
     """,
-    'version': '1.0.39',
+    'version': '1.0.40',
     'category': 'Medical',
     'author': 'Almighty Consulting Services',
     'support': 'info@almightycs.com',
