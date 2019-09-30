@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="invoice_form" model="ir.ui.view"> 
+        <field name="name">account.invoice.form</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_form"/>
+        <field name="arch" type="xml">
+            <field name="partner_id" position="after">
+                <field name="physician_id"/>
+            </field>
+            <field name="date_invoice" position="after">
+                <field name="ref_physician_id"/>
+            </field>
+            <xpath expr ="//button[@name='action_invoice_draft']" position="after">
+                <button string="Split Invoice" name="split_invoice" type="object" attrs="{'invisible':[('state', 'not in', ['draft'])]}" groups="acs_hms.group_allow_invoice_splitting"/>
+            </xpath>
+            <xpath expr ="//field[@name='invoice_line_ids']/tree/field[@name='price_subtotal']" position="after"> 
+                <field name="split" groups="acs_hms.group_allow_invoice_splitting"/> 
+                <field name="qty_to_split" attrs="{'readonly': [('split', '=', False)]}" groups="acs_hms.group_allow_invoice_splitting"/> 
+            </xpath>
+        </field>      
+    </record>
+</odoo>

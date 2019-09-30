@@ -1,0 +1,830 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* acs_hms_laboratory
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-04 09:38+0000\n"
+"PO-Revision-Date: 2019-07-17 12:00+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 2.2.3\n"
+"Last-Translator: \n"
+"Language: ar_SA\n"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_hospitalization__request_count
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_hms_patient__request_count
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_hms_treatment__request_count
+msgid "# Lab Requests"
+msgstr "# طلبات المختبر"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_hospitalization__test_count
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_hms_patient__test_count
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_hms_treatment__test_count
+msgid "# Lab Tests"
+msgstr "# تحاليل المختبر"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_prescription
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_test
+msgid ""
+"<b>Comment(If Any):</b>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_prescription
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_test
+msgid "<b>Doctor’s Stamp/Signature</b>"
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_prescription
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_test
+msgid "<b>Patient:</b>"
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_prescription
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_test
+msgid "<b>Prescribing Doctor:</b>"
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_prescription
+msgid "<b>Prescription Date:</b>"
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_test
+msgid "<b>Reference:</b>"
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_test
+msgid "<b>Test Date:</b>"
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_test_request_form
+msgid "Accept"
+msgstr "قبول"
+
+#. module: acs_hms_laboratory
+#: selection:acs.laboratory.request,state:0
+msgid "Accepted"
+msgstr "مقبول"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__message_needaction
+msgid "Action Needed"
+msgstr "يحتاج اجراء"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__activity_ids
+msgid "Activities"
+msgstr "أنشطه"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__appointment_id
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__appointment_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_search
+msgid "Appointment"
+msgstr "موعد"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: acs_hms_laboratory
+#: selection:acs.laboratory.request,state:0
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_test_request_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_lab_test__code
+msgid "Code"
+msgstr "رمز"
+
+#. module: acs_hms_laboratory
+#: model:ir.ui.menu,name:acs_hms_laboratory.menu_hms_lab_cofig
+msgid "Configuration"
+msgstr "إعدادات"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_test_request_form
+msgid "Create Invoice"
+msgstr "إنشاء فاتوره"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_lab_test__create_uid
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__create_uid
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea__create_uid
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_laboratory_request_line__create_uid
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__create_uid
+msgid "Created by"
+msgstr "منشأه بواسطه"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_lab_test__create_date
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__create_date
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea__create_date
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_laboratory_request_line__create_date
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__create_date
+msgid "Created on"
+msgstr "منشأه في"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__date
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_search
+msgid "Date"
+msgstr "تاريخ"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_lab_test__description
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.hms_test_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__diagnosis
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_view
+msgid "Diagnosis"
+msgstr "التشخيص"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_lab_test__display_name
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__display_name
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea__display_name
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_laboratory_request_line__display_name
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__display_name
+msgid "Display Name"
+msgstr "عرض الاسم"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_search
+msgid "Doctor"
+msgstr "الطبيب"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,help:acs_hms_laboratory.field_acs_laboratory_request__physician_id
+msgid "Doctor who Request the lab test."
+msgstr "الطبيب الذي طلب تحليل المختبر."
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,help:acs_hms_laboratory.field_patient_laboratory_test__physician_id
+msgid "Doctor who requested the test"
+msgstr "الطبيب الذي طلب التحليل"
+
+#. module: acs_hms_laboratory
+#: selection:acs.laboratory.request,state:0
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_test_request_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_search
+msgid "Done"
+msgstr "مكتمل"
+
+#. module: acs_hms_laboratory
+#: selection:acs.laboratory.request,state:0
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_search
+msgid "Draft"
+msgstr "مسوده"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__info
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__note
+msgid "Extra Info"
+msgstr "معلومات إضافيه"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_view
+msgid "Extra Note"
+msgstr "ملاحظات إضافيه"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_search
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_hms_patient_laboratory_test_search
+msgid "Group By"
+msgstr "مجموعة حسب"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__hospitalization_id
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__hospitalization_id
+msgid "Hospitalization"
+msgstr "التنويم"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_lab_test__id
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__id
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea__id
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_laboratory_request_line__id
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__id
+msgid "ID"
+msgstr "الهويه"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,help:acs_hms_laboratory.field_acs_laboratory_request__message_unread
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,help:acs_hms_laboratory.field_acs_laboratory_request__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,help:acs_hms_laboratory.field_acs_laboratory_request__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: selection:acs.laboratory.request,state:0
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_test_request_form
+msgid "In Progress"
+msgstr "تحت الاجراء"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_search
+msgid "InPatient Registration"
+msgstr "تسجيل مريض تنويم"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__company_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_search
+msgid "Institution"
+msgstr "المؤسسة"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_test
+msgid "Investigation"
+msgstr "الاختبار"
+
+#. module: acs_hms_laboratory
+#: model:ir.model,name:acs_hms_laboratory.model_account_invoice
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__invoice_id
+msgid "Invoice"
+msgstr "فاتورة"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__no_invoice
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_search
+msgid "Invoice Exempt"
+msgstr "اعفاء من الفوتره"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_search
+msgid "Invoiced"
+msgstr "مفوتره"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: acs_hms_laboratory
+#: model:res.groups,name:acs_hms_laboratory.group_hms_lab_manager
+msgid "Lab Manager"
+msgstr "مدير المختبر"
+
+#. module: acs_hms_laboratory
+#: model:ir.actions.report,name:acs_hms_laboratory.report_acs_lab_prescription_id
+msgid "Lab Prescription Report"
+msgstr "تقرير وصفة المختبر"
+
+#. module: acs_hms_laboratory
+#: model:ir.actions.report,name:acs_hms_laboratory.action_report_acs_lab_test
+msgid "Lab Report"
+msgstr "تقرير المختبر"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_account_invoice__request_id
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea__request_id
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__request_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_hospitalization_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_hms_appointment_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_hms_patient_laboratory_test_search
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_hospital_hms_treatment_form
+msgid "Lab Request"
+msgstr "طلب تحليل مختبر"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__name
+msgid "Lab Request ID"
+msgstr "رقم طب التحليل"
+
+#. module: acs_hms_laboratory
+#: model:ir.actions.act_window,name:acs_hms_laboratory.hms_action_lab_test_request
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_hospitalization__request_ids
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_hms_patient__request_ids
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_hms_treatment__request_ids
+#: model:ir.ui.menu,name:acs_hms_laboratory.menu_lab_requestss
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.hms_patient_view_lab_test
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_test_request_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_hospitalization_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_hospital_hms_treatment_form
+msgid "Lab Requests"
+msgstr "طلبات التحاليل"
+
+#. module: acs_hms_laboratory
+#: code:addons/acs_hms_laboratory/models/laboratory.py:145
+#, python-format
+msgid "Lab Requests can be delete only in Draft state."
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model:res.groups,name:acs_hms_laboratory.group_hms_lab_user
+msgid "Lab Technician"
+msgstr "فني المختبر"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea__patient_lab_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_tree
+msgid "Lab Test"
+msgstr "تحليل مختبر"
+
+#. module: acs_hms_laboratory
+#: model:ir.model,name:acs_hms_laboratory.model_lab_test_critearea
+msgid "Lab Test Critearea"
+msgstr "معايير تحليل المختبر"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__line_ids
+msgid "Lab Test Line"
+msgstr "خط تحليل المختبر"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_prescription
+msgid "Lab Test Request"
+msgstr "طلب تحليل مختبر"
+
+#. module: acs_hms_laboratory
+#: model:ir.actions.act_window,name:acs_hms_laboratory.action_lab_result
+#: model:ir.ui.menu,name:acs_hms_laboratory.menu_lab_test_result
+msgid "Lab Test Results"
+msgstr "نتائج تحاليل المختبر"
+
+#. module: acs_hms_laboratory
+#: model:ir.model,name:acs_hms_laboratory.model_acs_lab_test
+msgid "Lab Test Type"
+msgstr "نوع تحليل المختبر"
+
+#. module: acs_hms_laboratory
+#: model:ir.actions.act_window,name:acs_hms_laboratory.hms_action_form_test
+#: model:ir.ui.menu,name:acs_hms_laboratory.hos_lab_test
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.hms_test_view
+msgid "Lab Tests"
+msgstr "تحاليل المختبر"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,help:acs_hms_laboratory.field_patient_laboratory_test__name
+msgid "Lab result ID"
+msgstr "رقم نتيجة المختبر"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.hms_test_tree
+msgid "Lab test type"
+msgstr "نوع تحليل المختبر"
+
+#. module: acs_hms_laboratory
+#: model:ir.ui.menu,name:acs_hms_laboratory.menu_laboratory
+msgid "Laboratory"
+msgstr "المختبر"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_view
+msgid "Laboratory Test"
+msgstr "تحليل المختبر"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_lab_test____last_update
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request____last_update
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea____last_update
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_laboratory_request_line____last_update
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test____last_update
+msgid "Last Modified on"
+msgstr "اخر تعديل في"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_lab_test__write_uid
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__write_uid
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea__write_uid
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_laboratory_request_line__write_uid
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__write_uid
+msgid "Last Updated by"
+msgstr "اخر تحديث بواسطه"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_lab_test__write_date
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__write_date
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea__write_date
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_laboratory_request_line__write_date
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__write_date
+msgid "Last Updated on"
+msgstr "اخر تحديث في"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_laboratory_request_line__request_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_test_request_form
+msgid "Lines"
+msgstr "خطوط"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الأساسي"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_lab_test__name
+msgid "Name"
+msgstr "الإسم"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea__normal_range
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_test
+msgid "Normal Range"
+msgstr "المعدل الطبيعي"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__notes
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_test_request_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الاجراءات"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,help:acs_hms_laboratory.field_acs_laboratory_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,help:acs_hms_laboratory.field_acs_laboratory_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,help:acs_hms_laboratory.field_acs_laboratory_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: acs_hms_laboratory
+#: selection:acs.laboratory.request,activity_state:0
+msgid "Overdue"
+msgstr "متأخر"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea__name
+msgid "Parameter"
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__pathologist_id
+#: model:ir.model.fields,help:acs_hms_laboratory.field_patient_laboratory_test__pathologist_id
+msgid "Pathologist"
+msgstr "أخصائي علم الأمراض"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__user_id
+msgid "Pathologist User"
+msgstr "حساب أخصائي علم الأمراض"
+
+#. module: acs_hms_laboratory
+#: model:ir.model,name:acs_hms_laboratory.model_hms_patient
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__patient_id
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__patient_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_search
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_hms_patient_laboratory_test_search
+msgid "Patient"
+msgstr "المريض"
+
+#. module: acs_hms_laboratory
+#: model:ir.model,name:acs_hms_laboratory.model_acs_hospitalization
+msgid "Patient Hospitalization"
+msgstr "تنويم المريض"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_pivot
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_calendar
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_search
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_appointment_pivot
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_patient_laboratory_test_calendar
+msgid "Patient Lab Test"
+msgstr "تحاليل المختبر للمريض"
+
+#. module: acs_hms_laboratory
+#: model:ir.model,name:acs_hms_laboratory.model_patient_laboratory_test
+msgid "Patient Laboratory Test"
+msgstr "تحاليل المختبر للمريض"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_hms_patient_laboratory_test_search
+msgid "Patient Laboratry Test Results"
+msgstr "نتائج تحاليل المختبر للمريض"
+
+#. module: acs_hms_laboratory
+#: selection:acs.laboratory.request,activity_state:0
+msgid "Planned"
+msgstr "مخطط"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__physician_id
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__physician_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_hms_patient_laboratory_test_search
+msgid "Prescribing Doctor"
+msgstr "الطبيب المحرر للوصفه"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_lab_test__remark
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea__remark
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_test
+msgid "Remark"
+msgstr "ملاحظه"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__date_requested
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: acs_hms_laboratory
+#: selection:acs.laboratory.request,state:0
+msgid "Requested"
+msgstr "مطلوب"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__activity_user_id
+msgid "Responsible User"
+msgstr "الحساب المسؤول"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea__result
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_test
+msgid "Result"
+msgstr "النتيجه"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_laboratory_request_line__sale_price
+msgid "Sale Price"
+msgstr "سعر البيع"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_lab_test__product_id
+msgid "Service"
+msgstr "الخدمه"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,help:acs_hms_laboratory.field_acs_lab_test__code
+msgid "Short name - code for the test"
+msgstr "الاسم المختصر - رمز للاختبار"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_laboratory_request_line__instruction
+msgid "Special Instructions"
+msgstr "تعليمات خاصة"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__state
+msgid "State"
+msgstr "حاله"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_test_request_tree
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_search
+msgid "Status"
+msgstr "الحاله"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,help:acs_hms_laboratory.field_acs_laboratory_request__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_test_request_form
+msgid "Submit Request"
+msgstr "تقديم الطلب"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_laboratory_request_line__test_id
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__test_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_test_request_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_hms_patient_laboratory_test_search
+msgid "Test"
+msgstr "تحليل"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_lab_test__critearea_ids
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__critearea_ids
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__critearea_ids
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.hms_test_view
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_view
+msgid "Test Cases"
+msgstr "حالات التحليل"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__date_analysis
+msgid "Test Date"
+msgstr "تاريخ التحليل"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_prescription
+msgid "Test Description"
+msgstr "وصف التحليل"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__name
+msgid "Test ID"
+msgstr "رقم التحليل"
+
+#. module: acs_hms_laboratory
+#: model:ir.model,name:acs_hms_laboratory.model_laboratory_request_line
+msgid "Test Lines"
+msgstr "خطوط التحليل"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_prescription
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.report_acs_lab_test
+msgid "Test Name"
+msgstr "اسم التحليل"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_lab_test__report
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__report
+msgid "Test Report"
+msgstr "تقرير التحليل"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_test_request_tree
+msgid "Test Requests"
+msgstr "طلبات التحليل"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.hms_patient_view_lab_test
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_test_request_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_hospitalization_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_hms_appointment_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_hospital_hms_treatment_form
+msgid "Test Results"
+msgstr "نتائج التحليل"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_lab_test_critearea__test_id
+msgid "Test type"
+msgstr "نوع التحليل"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,help:acs_hms_laboratory.field_acs_lab_test__name
+msgid "Test type, eg X-Ray, hemogram,biopsy..."
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_hms_patient_laboratory_test_search
+msgid "Tested By"
+msgstr "التحليل بواسطه"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_hospitalization__test_ids
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_hms_appointment__test_ids
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_hms_patient__test_ids
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_hms_treatment__test_ids
+msgid "Tests"
+msgstr "تحاليل"
+
+#. module: acs_hms_laboratory
+#: sql_constraint:acs.lab.test:0
+msgid "The Lab Test code must be unique"
+msgstr "يجب أن يكون رمز تحليل المختبر مميزاً"
+
+#. module: acs_hms_laboratory
+#: sql_constraint:patient.laboratory.test:0
+msgid "The test ID code must be unique"
+msgstr "يجب أن يكون رمز التحليل مميزا"
+
+#. module: acs_hms_laboratory
+#: selection:acs.laboratory.request,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.view_acs_laboratory_request_search
+msgid "Today's Investigation"
+msgstr "تحاليل اليوم"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__total_price
+msgid "Total"
+msgstr "المجموع"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__treatment_id
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_patient_laboratory_test__treatment_id
+msgid "Treatment"
+msgstr "العلاج"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: acs_hms_laboratory
+#: model_terms:ir.ui.view,arch_db:acs_hms_laboratory.patient_laboratory_test_test_request_form
+msgid "View Invoice"
+msgstr "عرض الفاتورة"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,field_description:acs_hms_laboratory.field_acs_laboratory_request__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الويب"
+
+#. module: acs_hms_laboratory
+#: model:ir.model.fields,help:acs_hms_laboratory.field_acs_laboratory_request__website_message_ids
+msgid "Website communication history"
+msgstr "سجل اتصالات الويب"
+
+#. module: acs_hms_laboratory
+#: model:ir.model,name:acs_hms_laboratory.model_acs_laboratory_request
+msgid "acs.laboratory.request"
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model:ir.model,name:acs_hms_laboratory.model_hms_appointment
+msgid "hms.appointment"
+msgstr ""
+
+#. module: acs_hms_laboratory
+#: model:ir.model,name:acs_hms_laboratory.model_hms_treatment
+msgid "hms.treatment"
+msgstr ""

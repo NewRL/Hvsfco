@@ -1,0 +1,15 @@
+1.0.1                       (26/10/2018)
+========================================
+--> Added module for v12
+
+1.0.2                       (05/01/2019)
+========================================
+--> Added action on temp and product.
+
+1.0.3                       (21/05/2019)
+========================================
+--> Improved the code for barcode generation in product template with more than one variant.
+
+1.0.4                       (21/06/2019)
+========================================
+--> Fixed issue of raising waring

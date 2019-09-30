@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <template id="report_acs_medical_advice_document">
+        <t t-call="web.external_layout">
+            <t t-set="doc" t-value="doc.with_context({'lang':doc.patient_id.lang})"/>
+            <div class="page">
+                <div class="mt64 oe_structure" />
+                <div class="col-12 mt32">
+                    <font color="white">...</font>
+                </div>
+                <div class="mt64">
+                    <div class="text-center">
+                        <h3>
+                            <strong>
+                                <u>
+                                    <i>Medical Advice</i>
+                                </u>
+                            </strong>
+                        </h3>
+                    </div>
+                </div>
+                <div class="row mt32 mb32" id="informations">
+                    <table class="table" style="margin-top:30px !important">
+                        <tr>
+                            <td style="border: none;">
+                                <strong>Patient: </strong>
+                                <span t-field="doc.patient_id.name" />
+                            </td>
+                            <td style="border: none;">
+                                <strong>Advice Date: </strong>
+                                <span t-field="doc.date" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: none;">
+                                <strong>Advising Doctor: </strong><span t-field="doc.physician_id"/>
+                            </td>
+                            <td style="border: none;">
+                                <strong>Age: </strong>
+                                <span t-field="doc.patient_id.age" />
+                            </td>
+                        </tr>
+                        <tr></tr>
+                    </table>
+                </div>
+
+                <div t-if="doc.lab_report" class="col-12 mb64 mt32">
+                    <span>
+                        <u>
+                            <b>Laboratory</b>
+                        </u>: </span>
+                    <font color="white">...</font>
+                    <span t-field="doc.lab_report" />
+                </div>
+
+                <div t-if="doc.radiological_report" class="col-12 mb64 mt32">
+                    <span>
+                        <u>
+                            <b>Radiological</b>
+                        </u>: </span>
+                    <font color="white">...</font>
+                    <span t-field="doc.radiological_report" />
+                </div>
+
+                <div class="col-12 mb64 mt32">
+                    <span>
+                        <u>
+                            <b>Comments</b>
+                        </u>: </span>
+                    <font color="white">...</font>
+                    <span t-field="doc.medical_advice" />
+                </div>
+                <div class="col-12 mt32 mb32">
+                    <font color="white">...</font>
+                </div>
+                <br/>
+                <br/>
+                <div class="col-12 mb32 mt64">
+                    <span>
+                        <u>
+                            <b>Doctor's Stamp/Signature</b>
+                        </u>
+                    </span>
+                </div>
+                <div class="oe_structure" />
+            </div>
+        </t>
+    </template>
+
+    <template id="report_acs_medical_advice">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="acs_hms.report_acs_medical_advice_document" t-lang="doc.patient_id.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+
+    <report id="report_acs_medical_advice_id"
+        string="Medical Advice"
+        model="hms.appointment"
+        report_type="qweb-pdf"
+        file="acs_hms.report_acs_medical_advice" 
+        name="acs_hms.report_acs_medical_advice"/>
+
+</odoo>

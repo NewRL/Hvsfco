@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Prescription View -->
+    <record id="view_hms_prescription_order_form" model="ir.ui.view">
+        <field name="name">prescription.order.form</field>
+        <field name="model">prescription.order</field>
+        <field name="inherit_id" ref='acs_hms.view_hms_prescription_order_form'/>
+        <field name="arch" type="xml">
+            <button name="button_reset" position="after">
+                <button name="create_invoice" states="" string="Create Invoice" type="object" attrs="{'invisible': ['|',('invoice_id','!=', False),('state','!=', 'prescription')]}"/>
+                <button name="view_invoice" states="" string="View Invoice" type="object" attrs="{'invisible': [('invoice_id','=', False)]}"/> 
+                <field name="invoice_id" invisible="1"/>
+            </button>
+        </field>
+    </record>
+
+    <record id="view_hms_prescription_order_search" model="ir.ui.view">
+        <field name="name">prescription.order.form</field>
+        <field name="model">prescription.order</field>
+        <field name="inherit_id" ref='acs_hms.view_hms_prescription_order_search'/>
+        <field name="arch" type="xml">
+            <field name="notes" position="after">
+                <field name="invoice_id" invisible="1"/>
+            </field>
+            <filter name="today" position="after">
+                <filter string="Not Invoiced" name="not_invoiced" domain="[('invoice_id','=', False)]"/>
+                <filter string="Today's Not Invoiced Prescription" name="search_default_today_not_invoiced" domain="[('invoice_id','=', False),('create_date','&gt;=', datetime.datetime.now().strftime('%Y-%m-%d 00:00:00')),('create_date','&lt;=', datetime.datetime.now().strftime('%Y-%m-%d 23:59:59'))]"/>
+            </filter>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="act_open_hms_prescription_order_view">
+        <field name="name">Prescription Order</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">prescription.order</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,kanban,form,calendar,pivot</field>
+        <field name="domain">[]</field>
+        <field name="context">{'search_default_today_not_invoiced': 1}</field>
+    </record>
+
+</odoo>

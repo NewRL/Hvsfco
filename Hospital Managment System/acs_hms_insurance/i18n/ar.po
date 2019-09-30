@@ -1,0 +1,1685 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* acs_hms_insurance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-01-29 15:42+0000\n"
+"PO-Revision-Date: 2019-07-17 12:14+0300\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 2.2.3\n"
+"Last-Translator: \n"
+"Language: ar_SA\n"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__claim_count
+msgid "# of Claims"
+msgstr "عدد المطالبات"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid "&amp;nbsp;<span>on</span>&amp;nbsp;"
+msgstr ""
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid ""
+"<span style=\"margin-left:-15px;\" class=\"col-6 pull-left"
+"\"><strong>Responsible:</strong></span>\n"
+"                        <span class=\"col-6\"><strong>Date:</strong></"
+"span><br/>\n"
+"                        <span/><br/>\n"
+"                        <span/><br/>"
+msgstr ""
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid "<span>Package: </span>"
+msgstr "<span>حزمه:</span>"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid "<strong>Date: </strong>"
+msgstr "<strong>تاريخ:</strong>"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid "<strong>Description</strong>"
+msgstr "<strong>وصف</strong>"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid "<strong>Product</strong>"
+msgstr "<strong>المنتج</strong>"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid "<strong>Quantity</strong>"
+msgstr "<strong>كميه</strong>"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>المجموع الفرعي</strong>"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid "<strong>Total</strong>"
+msgstr "<strong>مجموع</strong>"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid "<strong>Unit Price</strong>"
+msgstr "<strong>ل:</strong>"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__property_account_payable_id
+msgid "Account Payable"
+msgstr "حساب المستحق"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__property_account_receivable_id
+msgid "Account Receivable"
+msgstr "حساب العميل"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__message_needaction
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__message_needaction
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__message_needaction
+msgid "Action Needed"
+msgstr "الاجراء المطلوب"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist_template__active
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_req_doc__active
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_patient_insurance__active
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__active
+msgid "Active"
+msgstr "نشيط"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__activity_ids
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__activity_ids
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__activity_ids
+msgid "Activities"
+msgstr "الانشطه"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__activity_state
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__activity_state
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__additional_info
+msgid "Additional info"
+msgstr "معلومات إضافية"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_tpa_form
+msgid "Address"
+msgstr "عنوان"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__type
+msgid "Address Type"
+msgstr "نوع العنوان"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__age
+msgid "Age"
+msgstr "عمر"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__lang
+msgid ""
+"All the emails and documents sent to this contact will be translated in this "
+"language."
+msgstr ""
+"سيتم ترجمة جميع رسائل البريد الإلكتروني والمستندات المرسلة إلى جهة الاتصال "
+"هذه بهذه اللغة."
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__answer
+msgid "Answer"
+msgstr "إجابة"
+
+#. module: acs_hms_insurance
+#: selection:hms.insurance.claim,state:0
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_claim_form
+msgid "Approved"
+msgstr "وافق"
+
+#. module: acs_hms_insurance
+#: model:ir.model,name:acs_hms_insurance.model_ir_attachment
+msgid "Attachment"
+msgstr "المرفق "
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__message_attachment_count
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__message_attachment_count
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__bank_account_count
+msgid "Bank"
+msgstr "بنك"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__bank_ids
+msgid "Banks"
+msgstr "البنوك"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__barcode
+msgid "Barcode"
+msgstr "الباركود"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__is_blacklisted
+msgid "Blacklist"
+msgstr "القائمة السوداء"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__blood_group
+msgid "Blood Group"
+msgstr "فصيلة الدم"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__message_bounce
+msgid "Bounce"
+msgstr ""
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__commission_ids
+msgid "Business Commission"
+msgstr "العمولات "
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_claim_form
+msgid "Cancel"
+msgstr "الغاء"
+
+#. module: acs_hms_insurance
+#: selection:hms.insurance.claim,state:0
+msgid "Cancelled"
+msgstr "ملغي"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_acs_hospitalization__cashless
+msgid "Cashless"
+msgstr "غير النقدي"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__channel_ids
+msgid "Channels"
+msgstr "القنوات"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "تحقق مما إذا كانت جهة الاتصال شركة ، وإلا فهي شركة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__customer
+msgid ""
+"Check this box if this contact is a customer. It can be selected in sales "
+"orders."
+msgstr ""
+"حدد هذا المربع إذا كانت جهة الاتصال هذه عميلًا. يمكن اختيارها في أوامر "
+"المبيعات."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__supplier
+msgid ""
+"Check this box if this contact is a vendor. It can be selected in purchase "
+"orders."
+msgstr ""
+"حدد هذا المربع إذا كانت جهة الاتصال هذه بائعًا. يمكن اختيارها في أوامر الشراء."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__employee
+msgid "Check this box if this contact is an Employee."
+msgstr "حدد هذا المربع إذا كانت جهة الاتصال هذه هي الموظف."
+
+#. module: acs_hms_insurance
+#: model:ir.actions.act_window,name:acs_hms_insurance.action_checklist_tree
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__checklist_ids
+#: model:ir.ui.menu,name:acs_hms_insurance.menu_action_checklist
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_claim_form
+msgid "Checklist"
+msgstr "قائمة تدقيق"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__checklist_marked
+msgid "Checklist Progress"
+msgstr "إجراءات قائمة تدقيق"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__city
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_tpa_form
+msgid "City"
+msgstr "المدينة"
+
+#. module: acs_hms_insurance
+#: selection:account.invoice,hospital_invoice_type:0
+#: model:ir.actions.act_window,name:acs_hms_insurance.action_insurance_claim
+#: model:ir.model,name:acs_hms_insurance.model_hms_insurance_claim
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_account_invoice__claim_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist__claim_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_ir_attachment__claim_id
+#: model:ir.ui.menu,name:acs_hms_insurance.menu_claim
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_acs_insurance_claim_calendar
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_claim_pivot
+msgid "Claim"
+msgstr "كليم"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__date
+msgid "Claim Date"
+msgstr "تاريخ المطالبة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__name
+msgid "Claim Number"
+msgstr "رقم  المطالبة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__date_received
+msgid "Claim Received Date"
+msgstr "تاريخ استلام  المطالبة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__claim_ids
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_form_view
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_acs_hospitalization_form
+msgid "Claims"
+msgstr "المطالبات"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.actions.act_window,help:acs_hms_insurance.action_insurance_claim
+msgid "Click to add a new Patient Hospitalization."
+msgstr "انقر لإضافة مستشفى المريض الجديد."
+
+#. module: acs_hms_insurance
+#: model_terms:ir.actions.act_window,help:acs_hms_insurance.hospitalization_package_action
+msgid "Click to define a new Package."
+msgstr "انقر لتحديد حزمة جديدة."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__color
+msgid "Color Index"
+msgstr "مؤشر اللون"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__commercial_partner_id
+msgid "Commercial Entity"
+msgstr "الكيان التجاري"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__commission_percentage
+msgid "Commission Percentage"
+msgstr "نسب العمولات "
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__ref_company_ids
+msgid "Companies that refers to partner"
+msgstr "الشركات التي تشير إلى شريك"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__company_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__company_name
+msgid "Company Name"
+msgstr "اسم الشركة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__commercial_company_name
+msgid "Company Name Entity"
+msgstr "اسم التجاري للشركة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__company_type
+msgid "Company Type"
+msgstr "نوع الشركة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__partner_gid
+msgid "Company database ID"
+msgstr "الرقم التعريفي لقاعدة البيانات"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__contact_address
+msgid "Complete Address"
+msgstr "العنوان الكامل"
+
+#. module: acs_hms_insurance
+#: model:ir.ui.menu,name:acs_hms_insurance.main_menu_insurance_configuration
+msgid "Configuration"
+msgstr "اعدادات"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_claim_form
+msgid "Confirm"
+msgstr "تؤكد"
+
+#. module: acs_hms_insurance
+#: selection:hms.insurance.claim,state:0
+msgid "Confirmed"
+msgstr "تم تأكيد"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__child_ids
+msgid "Contacts"
+msgstr "جهات الاتصال"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__contracts_count
+msgid "Contracts Count"
+msgstr "عدد العقود"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__payment_token_count
+msgid "Count Payment Token"
+msgstr ""
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr "عداد عدد رسائل البريد الإلكتروني المرتجعة لجهة الاتصال هذه"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__country_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_tpa_form
+msgid "Country"
+msgstr "الدولة"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_acs_hospitalization_form
+msgid "Create Package Bill/Invoice"
+msgstr "إنشاء حزمة فاتورة / فاتورة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist__create_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist_template__create_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__create_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_company__create_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_req_doc__create_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_patient_insurance__create_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__create_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__create_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__create_uid
+msgid "Created by"
+msgstr "انشى بواسطة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist__create_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist_template__create_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__create_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_company__create_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_req_doc__create_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_patient_insurance__create_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__create_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__create_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__create_date
+msgid "Created on"
+msgstr "انشى في"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__credit_limit
+msgid "Credit Limit"
+msgstr "الحد الائتماني"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__currency_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__currency_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__property_stock_customer
+msgid "Customer Location"
+msgstr "موقع العميل"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__property_payment_term_id
+msgid "Customer Payment Terms"
+msgstr "شروط السداد للعميل"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__date
+msgid "Date"
+msgstr "تاريخ"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__dob
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__trust
+msgid "Degree of trust you have in this debtor"
+msgstr "درجة الثقة التي لديك في هذا المدين"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_company__description
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__name
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_form_view
+msgid "Description"
+msgstr "وصف"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__amount_difference
+msgid "Difference Amount"
+msgstr "مقدار الفرق"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid "Disc.(%)"
+msgstr "الخصم (٪)"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__discount
+msgid "Discount"
+msgstr "خصم"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist__display_name
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist_template__display_name
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__display_name
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_company__display_name
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_req_doc__display_name
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_patient_insurance__display_name
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__display_name
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__display_name
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__doc_ids
+msgid "Document"
+msgstr "المستند"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_claim_form
+msgid "Documents"
+msgstr "المستندات"
+
+#. module: acs_hms_insurance
+#: selection:hms.insurance.claim,state:0
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_claim_form
+msgid "Done"
+msgstr "اكتمل"
+
+#. module: acs_hms_insurance
+#: selection:hms.insurance.claim,state:0
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__partner_share
+msgid ""
+"Either customer (not a user), either shared user. Indicated the current "
+"partner is a customer without access or with a limited access created for "
+"sharing data."
+msgstr ""
+"إما عميل (وليس مستخدم) ، إما مستخدم مشترك. يشار إلى أن الشريك الحالي هو عميل "
+"بدون وصول أو مع وصول محدود تم إنشاؤه لمشاركة البيانات."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__email
+msgid "Email"
+msgstr "البريد الالكتروني"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__end_date
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__property_account_position_id
+msgid "Fiscal Position"
+msgstr "السنة المالية"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__message_follower_ids
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__message_follower_ids
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__message_channel_ids
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__message_channel_ids
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__message_channel_ids
+msgid "Followers (Channels)"
+msgstr " قنوات المتابعين"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__message_partner_ids
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__message_partner_ids
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr ""
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__email_formatted
+msgid "Formatted Email"
+msgstr "البريد الإلكتروني المنسق"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__sex
+msgid "Gender"
+msgstr "جنس"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_claim_form
+msgid "General Information"
+msgstr "معلومات عامة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__provide_commission
+msgid "Give Commission"
+msgstr ""
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__has_unreconciled_entries
+msgid "Has Unreconciled Entries"
+msgstr "له مدخلات لم تتم تصفيتها"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_account_invoice__hospital_invoice_type
+msgid "Hospital Invoice Type"
+msgstr "نوع فاتورة المستشفى"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__hospital_name
+msgid "Hospital Name"
+msgstr "اسم المستشفى"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__hospitalization_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_ir_attachment__hospitalization_id
+msgid "Hospitalization"
+msgstr "التنويم"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist__id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist_template__id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_company__id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_req_doc__id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_patient_insurance__id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__id
+msgid "ID"
+msgstr "رقم الهوية"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__im_status
+msgid "IM Status"
+msgstr ""
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__code
+msgid "Identification Code"
+msgstr "رمز التعريف"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__code
+msgid "Identifier provided by the Health Center."
+msgstr "المعرف المقدم من قبل المركز الصحي."
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_claim_form
+msgid "If any Query"
+msgstr "إذا كان أي استفسار"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_hms_insurance_claim__message_unread
+#: model:ir.model.fields,help:acs_hms_insurance.field_hospitalization_package__message_unread
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان فحص الرسائل الجديدة يتطلب انتباهكم."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_hms_insurance_claim__message_needaction
+#: model:ir.model.fields,help:acs_hms_insurance.field_hospitalization_package__message_needaction
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديد ذلك ، فإن الرسائل الجديدة تتطلب اهتمامك."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_hms_insurance_claim__message_has_error
+#: model:ir.model.fields,help:acs_hms_insurance.field_hospitalization_package__message_has_error
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فبعض الرسائل بها خطأ في التسليم."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__is_blacklisted
+msgid ""
+"If the email address is on the blacklist, the contact won't receive mass "
+"mailing anymore, from any list"
+msgstr ""
+"إذا كان عنوان البريد الإلكتروني في القائمة السوداء ، فلن تتلقى جهة الاتصال "
+"بريدًا جماعيًا بعد الآن ، من أي قائمة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__image
+msgid "Image"
+msgstr "صورة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__industry_id
+msgid "Industry"
+msgstr "صناعة"
+
+#. module: acs_hms_insurance
+#: selection:account.invoice,hospital_invoice_type:0
+msgid "Inpatient"
+msgstr "المرضى الداخليين"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_patient__insurance_ids
+#: model:ir.ui.menu,name:acs_hms_insurance.main_menu_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_patient_form
+msgid "Insurance"
+msgstr "تأمين"
+
+#. module: acs_hms_insurance
+#: model:ir.model,name:acs_hms_insurance.model_hms_insurance_checklist
+msgid "Insurance Checklist"
+msgstr "قائمة التأمين"
+
+#. module: acs_hms_insurance
+#: model:ir.model,name:acs_hms_insurance.model_hms_insurance_checklist_template
+msgid "Insurance Checklist Template"
+msgstr "قالب قائمة التأمين"
+
+#. module: acs_hms_insurance
+#: model:ir.model,name:acs_hms_insurance.model_hms_insurance_company
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_account_invoice__insurance_company_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__insurance_company_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_patient_insurance__insurance_company
+#: model:ir.ui.menu,name:acs_hms_insurance.menu_insurance_company
+msgid "Insurance Company"
+msgstr "شركة التأمين"
+
+#. module: acs_hms_insurance
+#: model:res.groups,name:acs_hms_insurance.group_hms_insurance_officer
+msgid "Insurance Officer"
+msgstr "موظف التأمين"
+
+#. module: acs_hms_insurance
+#: model:ir.model,name:acs_hms_insurance.model_hms_insurance_req_doc
+msgid "Insurance Req Doc"
+msgstr "وثيقة التأمين"
+
+#. module: acs_hms_insurance
+#: model:ir.actions.act_window,name:acs_hms_insurance.action_insurance_tpa
+#: model:ir.model,name:acs_hms_insurance.model_insurance_tpa
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_tpa_form
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_tpa_search
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_tpa_tree
+msgid "Insurance TPA"
+msgstr "التأمين TPA"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_patient_insurance__insured_value
+msgid "Insured Value"
+msgstr "قيمة المؤمن"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__note
+msgid "Internal Notes"
+msgstr "ملاحظات داخلية"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__ref
+msgid "Internal Reference"
+msgstr "المرجع الداخلي"
+
+#. module: acs_hms_insurance
+#: model:ir.model,name:acs_hms_insurance.model_account_invoice
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__invoice_warn
+msgid "Invoice"
+msgstr "فاتورة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__invoice_ids
+msgid "Invoices"
+msgstr "الفواتير"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__message_is_follower
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__message_is_follower
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__message_is_follower
+msgid "Is Follower"
+msgstr "هو متابع"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__is_referring_doctor
+msgid "Is Refereinng Physician"
+msgstr "هو الطبيب المحول"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__is_company
+msgid "Is a Company"
+msgstr "هي شركة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__customer
+msgid "Is a Customer"
+msgstr "هو عميل"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__supplier
+msgid "Is a Vendor"
+msgstr "المورد"
+
+#. module: acs_hms_insurance
+#: model:ir.actions.act_window,name:acs_hms_insurance.action_insurance_company
+msgid "Isurance Company"
+msgstr "شركة التأمين"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__function
+msgid "Job Position"
+msgstr "وظيفه"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__journal_item_count
+msgid "Journal Items"
+msgstr "عناصر المجلة"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid ""
+"Keep this print as reference further communication and procedure.\n"
+"                    Should you have any questions please contact us at your "
+"convenience.<br/><br/>\n"
+"                    Best regards,<br/>"
+msgstr ""
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__lang
+msgid "Language"
+msgstr "لغة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist____last_update
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist_template____last_update
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim____last_update
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_company____last_update
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_req_doc____last_update
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_patient_insurance____last_update
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package____last_update
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line____last_update
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist__write_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist_template__write_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__write_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_company__write_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_req_doc__write_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_patient_insurance__write_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__write_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__write_uid
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist__write_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist_template__write_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__write_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_company__write_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_req_doc__write_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_patient_insurance__write_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__write_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__write_date
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__last_time_entries_checked
+msgid ""
+"Last time the invoices & payments matching was performed for this partner. "
+"It is set either if there's not at least an unreconciled debit and an "
+"unreconciled credit or if you click the \"Done\" button."
+msgstr ""
+"آخر مرة تم فيها إجراء مطابقة الفواتير والمدفوعات لهذا الشريك. يتم تعيينه إما "
+"إذا لم يكن هناك على الأقل خصم غير قابل للتسوية أو رصيد غير قابل للتسوية أو "
+"إذا قمت بالنقر فوق الزر \"تم\"."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__last_time_entries_checked
+msgid "Latest Invoices & Payments Matching Date"
+msgstr "أحدث تاريخ مطابقة للفواتير والمدفوعات"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_form_view
+msgid "Lines"
+msgstr "خطوط"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__message_main_attachment_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__message_main_attachment_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__max_exit_value
+msgid "Max Exit Value"
+msgstr ""
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__image_medium
+msgid "Medium-sized image"
+msgstr "صورة متوسطة الحجم"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__image_medium
+msgid ""
+"Medium-sized image of this contact. It is automatically resized as a "
+"128x128px image, with aspect ratio preserved. Use this field in form views "
+"or some kanban views."
+msgstr ""
+"صورة متوسطة الحجم لجهة الاتصال هذه. يتم تغيير حجمها تلقائيًا كصورة 128 × 128 "
+"بكسل ، مع الحفاظ على نسبة العرض إلى الارتفاع. استخدم هذا الحقل في طرق عرض "
+"النماذج أو بعض طرق عرض kanban."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__message_has_error
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__message_has_error
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__invoice_warn_msg
+msgid "Message for Invoice"
+msgstr "رسالة للفاتورة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__picking_warn_msg
+msgid "Message for Stock Picking"
+msgstr "رسالة لاختيار الأسهم"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__message_ids
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__message_ids
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__message_ids
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__mobile
+msgid "Mobile"
+msgstr "التليفون المحمول"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist__name
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist_template__name
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_company__name
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_req_doc__name
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__name
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__name
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_claim_form
+msgid "Name"
+msgstr "اسم"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__activity_date_deadline
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__activity_date_deadline
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "آخر نشاط الموعد النهائي"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__activity_summary
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__activity_summary
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__activity_type_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__activity_type_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__comment
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__message_needaction_counter
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__message_needaction_counter
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__message_has_error_counter
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__message_has_error_counter
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_hms_insurance_claim__message_needaction_counter
+#: model:ir.model.fields,help:acs_hms_insurance.field_hospitalization_package__message_needaction_counter
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_hms_insurance_claim__message_has_error_counter
+#: model:ir.model.fields,help:acs_hms_insurance.field_hospitalization_package__message_has_error_counter
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ التسليم"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_hms_insurance_claim__message_unread_counter
+#: model:ir.model.fields,help:acs_hms_insurance.field_hospitalization_package__message_unread_counter
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__order_id
+msgid "Order"
+msgstr "طلب"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__order_line
+msgid "Order Lines"
+msgstr "ترتيب الخطوط"
+
+#. module: acs_hms_insurance
+#: selection:hms.insurance.claim,activity_state:0
+#: selection:hospitalization.package,activity_state:0
+msgid "Overdue"
+msgstr "متأخرات"
+
+#. module: acs_hms_insurance
+#: model:ir.actions.act_window,name:acs_hms_insurance.hospitalization_package_action
+#: model:ir.actions.report,name:acs_hms_insurance.workorder_report
+#: model:ir.model,name:acs_hms_insurance.model_hospitalization_package
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_acs_hospitalization__package_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__package_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_list_view
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_search
+msgid "Package"
+msgstr "حزمــة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_acs_hospitalization__package_bill_created
+msgid "Package Bill Created"
+msgstr "حزمة فاتورة تم إنشاؤها"
+
+#. module: acs_hms_insurance
+#: model:ir.model,name:acs_hms_insurance.model_hospitalization_package_line
+msgid "Package Line"
+msgstr "خط الحزم"
+
+#. module: acs_hms_insurance
+#: model:ir.ui.menu,name:acs_hms_insurance.menu_action_package
+msgid "Packages"
+msgstr "الحزم"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__parent_name
+msgid "Parent name"
+msgstr "اسم الوالدين"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__partner_id
+msgid "Partner"
+msgstr "شريك"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__contract_ids
+msgid "Partner Contracts"
+msgstr "عقود الشركاء"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__amount_pass
+msgid "Passed Amount"
+msgstr "المبلغ المنقح"
+
+#. module: acs_hms_insurance
+#: model:ir.model,name:acs_hms_insurance.model_hms_patient
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__patient_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_patient_insurance__patient_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_ir_attachment__patient_id
+msgid "Patient"
+msgstr "المريض"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_acs_hospitalization_form
+msgid "Patient Doc"
+msgstr "وثيقة المريض"
+
+#. module: acs_hms_insurance
+#: model:ir.model,name:acs_hms_insurance.model_acs_hospitalization
+msgid "Patient Hospitalization"
+msgstr "المريض المنوم"
+
+#. module: acs_hms_insurance
+#: model:ir.model,name:acs_hms_insurance.model_hms_patient_insurance
+msgid "Patient Insurance"
+msgstr "تامين المريض"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__debit_limit
+msgid "Payable Limit"
+msgstr "الحد المستحق"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__payment_token_ids
+msgid "Payment Tokens"
+msgstr "رموز الدفع"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__phone
+msgid "Phone"
+msgstr "هاتف"
+
+#. module: acs_hms_insurance
+#: selection:hms.insurance.claim,activity_state:0
+#: selection:hospitalization.package,activity_state:0
+msgid "Planned"
+msgstr "مخطط"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__policy_number
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_patient_insurance__policy_number
+msgid "Policy Number"
+msgstr "رقم البوليسة"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_product_simple_tree
+msgid "Price"
+msgstr "السعر"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__price_unit
+msgid "Price Unit"
+msgstr "وحدة السعر"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__property_product_pricelist
+msgid "Pricelist"
+msgstr "قائمة الاسعار"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid "Print Name and Sign"
+msgstr "طباعة الاسم والتوقيع"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__product_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_product_simple_tree
+msgid "Product"
+msgstr "المنتج"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_line_list_view
+msgid "Qty"
+msgstr "الكمية"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__product_uom_qty
+msgid "Quantity"
+msgstr "كمية"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__question
+msgid "Question"
+msgstr "سؤال"
+
+#. module: acs_hms_insurance
+#: selection:hms.insurance.claim,state:0
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_claim_form
+msgid "Received"
+msgstr "تم الاستلام"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__amount_received
+msgid "Received Amount"
+msgstr "المبلغ المستلم"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__website_id
+msgid "Registration Website"
+msgstr "تسجيل الموقع"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__parent_id
+msgid "Related Company"
+msgstr "شركة ذات صلة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist__remark
+msgid "Remarks"
+msgstr "ملاحظات"
+
+#. module: acs_hms_insurance
+#: model:ir.actions.act_window,name:acs_hms_insurance.action_mediclaim_doc_type
+#: model:ir.ui.menu,name:acs_hms_insurance.menu_action_mediclaim_doc_type
+msgid "Req Documents"
+msgstr "الوثائق المطلوبة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__req_document_ids
+msgid "Required Documents"
+msgstr "الوتائق المطلوبة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__activity_user_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__activity_user_id
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__user_id
+msgid "Salesperson"
+msgstr "مندوب مبيعات"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__invoice_warn
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__picking_warn
+msgid ""
+"Selecting the \"Warning\" option will notify user with the message, "
+"Selecting \"Blocking Message\" will throw an exception with the message and "
+"block the flow. The Message has to be written in the next field."
+msgstr ""
+"سيؤدي تحديد خيار \"تحذير\" إلى إخطار المستخدم بالرسالة ، وسيؤدي تحديد "
+"\"رسالة الحظر\" إلى استثناء استثناء للرسالة وحظر التدفق. يجب كتابة الرسالة "
+"في الحقل التالي."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__self
+msgid "Self"
+msgstr "ذاتي"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_claim_form
+msgid "Send For Approval"
+msgstr "إرسال للموافقة"
+
+#. module: acs_hms_insurance
+#: selection:hms.insurance.claim,state:0
+msgid "Sent For Approval"
+msgstr "أرسلت للموافقة عليها"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__sequence
+msgid "Sequence"
+msgstr "تسلسل"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_claim_form
+msgid "Set to Draft"
+msgstr "اضبط على المسودة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__partner_share
+msgid "Share Partner"
+msgstr "شارك الشريك"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__signup_expiration
+msgid "Signup Expiration"
+msgstr "تسجيل انتهاء الصلاحية"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__signup_token
+msgid "Signup Token"
+msgstr "رمز التسجيل"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__signup_type
+msgid "Signup Token Type"
+msgstr "نوع رمز التسجيل"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__signup_valid
+msgid "Signup Token is Valid"
+msgstr "رمز التسجيل صالح"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__signup_url
+msgid "Signup URL"
+msgstr "عنوان URL للتسجيل"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__image_small
+msgid "Small-sized image"
+msgstr "صورة صغيرة الحجم"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__image_small
+msgid ""
+"Small-sized image of this contact. It is automatically resized as a 64x64px "
+"image, with aspect ratio preserved. Use this field anywhere a small image is "
+"required."
+msgstr ""
+"صورة صغيرة الحجم لجهة الاتصال هذه. يتم تغيير حجمها تلقائيًا كصورة 64 × 64 "
+"بكسل ، مع الحفاظ على نسبة العرض إلى الارتفاع. استخدم هذا الحقل في أي مكان "
+"مطلوب صورة صغيرة."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__start_date
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__state
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__state_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_tpa_form
+msgid "State"
+msgstr "حالة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_hms_insurance_claim__activity_state
+#: model:ir.model.fields,help:acs_hms_insurance.field_hospitalization_package__activity_state
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__picking_warn
+msgid "Stock Picking"
+msgstr "اختيار الأسهم"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__street
+msgid "Street"
+msgstr "شارع"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_tpa_form
+msgid "Street..."
+msgstr "شارع"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__street2
+msgid "Street2"
+msgstr "شارع2"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__price_subtotal
+msgid "Subtotal"
+msgstr "المحموع "
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__amount_tds
+msgid "TDS Amount"
+msgstr ""
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__tpa_id
+#: model:ir.ui.menu,name:acs_hms_insurance.menu_action_tpa
+msgid "TPA"
+msgstr ""
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_tpa_form
+msgid "TPA Name"
+msgstr ""
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__category_id
+msgid "Tags"
+msgstr "الكلمات"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__vat
+msgid "Tax ID"
+msgstr "الرقم الضريبي"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__amount_tax
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__price_tax
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__tax_id
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid "Taxes"
+msgstr "الضرائب"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__vat
+msgid ""
+"The Tax Identification Number. Complete it if the contact is subjected to "
+"government taxes. Used in some legal statements."
+msgstr ""
+"رقم التعريف الضريبي. أكمله إذا تعرضت جهة الاتصال للضرائب الحكومية. المستخدمة "
+"في بعض البيانات القانونية."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__property_account_position_id
+msgid ""
+"The fiscal position determines the taxes/accounts used for this contact."
+msgstr "يحدد الوضع المالي الضرائب / الحسابات المستخدمة لجهة الاتصال هذه."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__user_id
+msgid "The internal user in charge of this contact."
+msgstr "المستخدم الداخلي المسؤول عن جهة الاتصال هذه."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__has_unreconciled_entries
+msgid ""
+"The partner has at least one unreconciled debit and credit since last time "
+"the invoices & payments matching was performed."
+msgstr ""
+"لدى الشريك رصيد وخصم واحد على الأقل لم تتم تسويته منذ آخر مرة تم فيها إجراء "
+"مطابقة الفواتير والمدفوعات."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__tz
+msgid ""
+"The partner's timezone, used to output proper date and time values inside "
+"printed reports. It is important to set a value for this field. You should "
+"use the same timezone that is otherwise used to pick and render date and "
+"time values: your computer's timezone."
+msgstr ""
+"المنطقة الزمنية للشريك ، تُستخدم لإخراج قيم التاريخ والوقت المناسبة داخل "
+"التقارير المطبوعة. من المهم تحديد قيمة لهذا الحقل. يجب عليك استخدام نفس "
+"المنطقة الزمنية المستخدمة بطريقة أخرى لاختيار قيم التاريخ والوقت وعرضها: "
+"المنطقة الزمنية للكمبيوتر الخاص بك."
+
+#. module: acs_hms_insurance
+#: sql_constraint:hospitalization.package:0
+msgid "The start date must be anterior to the end date."
+msgstr "يجب أن يكون تاريخ البدء الأمامي لتاريخ الانتهاء."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__property_stock_customer
+msgid ""
+"The stock location used as destination when sending goods to this contact."
+msgstr "موقع المخزون المستخدم كوجهة عند إرسال البضائع إلى جهة الاتصال هذه."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__property_stock_supplier
+msgid ""
+"The stock location used as source when receiving goods from this contact."
+msgstr "موقع المخزون المستخدم كمصدر عند استلام البضائع من جهة الاتصال هذه."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__property_account_payable_id
+msgid ""
+"This account will be used instead of the default one as the payable account "
+"for the current partner"
+msgstr ""
+"سيتم استخدام هذا الحساب بدلاً من الحساب الافتراضي كحساب مستحق للشريك الحالي"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__property_account_receivable_id
+msgid ""
+"This account will be used instead of the default one as the receivable "
+"account for the current partner"
+msgstr ""
+"سيتم استخدام هذا الحساب بدلاً من الحساب الافتراضي كحساب مستحق للشريك الحالي"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__image
+msgid ""
+"This field holds the image used as avatar for this contact, limited to "
+"1024x1024px"
+msgstr ""
+"يحتوي هذا الحقل على الصورة المستخدمة كأفاتار لجهة الاتصال هذه ، والتي تقتصر "
+"على 1024 × 1024 بكسل"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__property_supplier_payment_term_id
+msgid ""
+"This payment term will be used instead of the default one for purchase "
+"orders and vendor bills"
+msgstr ""
+"سيتم استخدام مصطلح الدفع هذا بدلاً من المصطلح الافتراضي لأوامر الشراء وفواتير "
+"البائع"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__property_payment_term_id
+msgid ""
+"This payment term will be used instead of the default one for sales orders "
+"and customer invoices"
+msgstr ""
+"سيتم استخدام مصطلح الدفع هذا بدلاً من المصطلح الافتراضي لطلبات المبيعات "
+"وفواتير العملاء"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__property_product_pricelist
+msgid ""
+"This pricelist will be used, instead of the default one, for sales to the "
+"current partner"
+msgstr ""
+"سيتم استخدام قائمة الأسعار هذه ، بدلاً من القائمة الافتراضية ، للمبيعات إلى "
+"الشريك الحالي"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__tz
+msgid "Timezone"
+msgstr "التوقيت"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__tz_offset
+msgid "Timezone offset"
+msgstr "تعويض المنطقة الزمنية"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__title
+msgid "Title"
+msgstr "عنوان"
+
+#. module: acs_hms_insurance
+#: selection:hms.insurance.claim,activity_state:0
+#: selection:hospitalization.package,activity_state:0
+msgid "Today"
+msgstr "اليوم"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__amount_total
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__price_total
+msgid "Total"
+msgstr "إجمالي "
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__amount_total
+msgid "Total Amount"
+msgstr "المبلغ الإجمالي"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__amount_requested
+msgid "Total Claim Amount"
+msgstr "إجمالي مبلغ المطالبة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__total_invoiced
+msgid "Total Invoiced"
+msgstr "إجمالي الفاتورة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__debit
+msgid "Total Payable"
+msgstr "مجموع المستحق"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_report_document
+msgid "Total Price"
+msgstr "السعر الكلي"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__credit
+msgid "Total Receivable"
+msgstr "اجمالي المستلم "
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__credit
+msgid "Total amount this customer owes you."
+msgstr "المبلغ الإجمالي لهذا العميل مدين لك."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__debit
+msgid "Total amount you have to pay to this vendor."
+msgstr "المبلغ الإجمالي الذي يتعين عليك دفعه لهذا البائع."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package_line__product_uom
+msgid "Unit of Measure"
+msgstr "وحدة القياس"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__message_unread
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__message_unread
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__message_unread_counter
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__message_unread_counter
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__amount_untaxed
+msgid "Untaxed Amount"
+msgstr "مبلغ غير خاضع للضريبة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__barcode
+msgid "Use a barcode to identify this contact from the Point of Sale."
+msgstr "استخدم الرمز الشريطي لتحديد جهة الاتصال هذه من نقطة البيع."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__type
+msgid ""
+"Used by Sales and Purchase Apps to select the relevant address depending on "
+"the context."
+msgstr ""
+"يستخدم بواسطة Sales and Purchase Apps لتحديد العنوان ذي الصلة وفقًا للسياق."
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__user_ids
+msgid "Users"
+msgstr "المستخدمين"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__currency_id
+msgid "Utility field to express amount currency"
+msgstr "مجال المنفعة للتعبير عن عملة المبلغ"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_patient_insurance__validity
+msgid "Validity"
+msgstr "صلاحية"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__property_stock_supplier
+msgid "Vendor Location"
+msgstr "البائع الموقع"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__property_supplier_payment_term_id
+msgid "Vendor Payment Terms"
+msgstr "شروط الدفع البائع"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_claim_form
+msgid "View Invoice"
+msgstr "عرض الفاتورة"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__website
+msgid "Website"
+msgstr "موقع الكتروني"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_claim__website_message_ids
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hospitalization_package__website_message_ids
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,help:acs_hms_insurance.field_hms_insurance_claim__website_message_ids
+#: model:ir.model.fields,help:acs_hms_insurance.field_hospitalization_package__website_message_ids
+#: model:ir.model.fields,help:acs_hms_insurance.field_insurance_tpa__website_message_ids
+msgid "Website communication history"
+msgstr "سجل اتصالات الموقع"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.hospitalization_package_line_list_view
+msgid "Workorder Lines"
+msgstr "خطوط ترتيب العمل"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_hms_insurance_checklist__is_done
+msgid "Y/N"
+msgstr ""
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_tpa_form
+msgid "ZIP"
+msgstr "المز البريدي"
+
+#. module: acs_hms_insurance
+#: model:ir.model.fields,field_description:acs_hms_insurance.field_insurance_tpa__zip
+msgid "Zip"
+msgstr "المز البريدي"
+
+#. module: acs_hms_insurance
+#: model_terms:ir.ui.view,arch_db:acs_hms_insurance.view_insurance_tpa_form
+msgid "e.g. +506 5555 5555"
+msgstr "مثلا +966570001262"

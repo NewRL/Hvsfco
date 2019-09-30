@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- A4 Paper Format -->
+    <template id="report_patient_barcode">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc"> 
+                <t t-call="web.basic_layout">
+                    <div class="page">
+                        <t t-foreach="range(starting_position)" t-as="s">
+                            <div style="width:372px;height:210px;float:left;margin:0 40px;font-size:13px;margin-bottom:1px;border:0px solid #fff;margin-left:10px;">
+                                <table class="table">
+                                    <tr>
+                                        <td>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </t>
+                        <t t-foreach="range(quantity)" t-as="l">
+                            <div style="width:350px; height:210px; float:left; margin:0 50px; font-size:13px; margin-bottom:1px; border:0px solid #fff; margin-left:30px;">
+                                <table class="table ">
+                                    <tr>
+                                        <td style="">
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <strong t-field="doc.name"/>
+                                                    <div t-field="doc.partner_id"
+                                                        t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
+                                                </div>
+                                                <div class="col-4">
+                                                    <span t-field="doc.image_medium"
+                                                        t-options="{'widget': 'image', 'class': 'img-rounded'}"/>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td style="float:left;">
+                                            <center>
+                                                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' %('Code128',doc.barcode,440,55)"/>
+                                            </center>
+                                            <center>
+                                                <strong t-field="doc.barcode"/>
+                                            </center>
+                                            <center>
+                                                
+                                            </center>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <report id="action_patient_barcode"
+        string="Patient BarCode"
+        model="hms.patient"
+        report_type="qweb-pdf"
+        file="acs_hms_barcode.report_patient_barcode" 
+        name="acs_hms_barcode.report_patient_barcode"
+        multi="True"/>
+
+    <!-- Label Printer Format -->
+
+    <template id="report_patient_barcode_lable">
+        <t t-call="web.basic_layout">
+            <div class="page">
+                <t t-foreach="docs" t-as="doc">
+                    <div style="width:350px; height:310px; float:left; margin:0 50px; margin-bottom:1px; font-size:19px; border:0px solid #fff; margin-left:30px;">
+                        <table class="table">
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <strong t-field="doc.name"/>
+                                            <div t-field="doc.partner_id"
+                                                t-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
+                                        </div>
+                                        <div class="col-4">
+                                            <span t-field="doc.image_medium"
+                                                t-options="{'widget': 'image', 'class': 'img-rounded'}"/>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="float:left;">
+                                    <center>
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' %('Code128',doc.barcode,440,85)"/>
+                                    </center>
+                                    <center>
+                                        <strong t-field="doc.barcode"/>
+                                    </center>
+                                    <center>
+                                    </center>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <report id="action_patient_barcode_lable"
+        string="Patient BarCode LP"
+        model="hms.patient"
+        report_type="qweb-pdf"
+        file="acs_hms_barcode.report_patient_barcode_lable" 
+        name="acs_hms_barcode.report_patient_barcode_lable"/>
+
+</odoo>
